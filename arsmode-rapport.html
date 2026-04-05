@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapport från Årsmötet – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .article-hero {
+      background: linear-gradient(140deg, #0d2137 0%, #1a3a5c 50%, #1e5c7a 100%);
+      color: white;
+      padding: 5rem 1.5rem 4.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 60% 30%, rgba(200,150,62,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .article-hero-content { position: relative; z-index: 1; }
+    .article-hero h1       { color: white; margin-bottom: 1rem; }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .article-wave {
+      position: absolute; bottom: -1px; left: 0; right: 0; line-height: 0;
+    }
+    .article-wave svg { display: block; width: 100%; }
+
+    /* Artikelinnehåll */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      margin-bottom: 1.5rem;
+      line-height: 1.85;
+    }
+    .article-body h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .article-body h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-lead {
+      font-size: 1.2rem !important;
+      color: var(--text) !important;
+      font-weight: 400;
+      border-left: 3px solid var(--gold);
+      padding-left: 1.25rem;
+      margin-bottom: 2rem !important;
+    }
+
+    /* Bildgalleri */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin: 2.5rem 0;
+    }
+    .photo-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius);
+      cursor: zoom-in;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .photo-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 24px rgba(13,33,55,0.2);
+    }
+    .photo-grid .photo-wide {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+
+    /* Person-kort */
+    .person-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .person-card {
+      background: var(--sand-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+    }
+    .person-card .role-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+    .role-badge--outgoing {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .role-badge--incoming {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .person-card h3 { margin-bottom: 0.4rem; font-size: 1.15rem; }
+    .person-card p  { font-size: 0.88rem; color: var(--text-mid); margin: 0; }
+
+    /* Tillbaka-länk */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ocean);
+      margin-bottom: 2rem;
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--ocean-light); }
+    .back-link::before { content: '←'; }
+
+    @media (max-width: 600px) {
+      .photo-grid { grid-template-columns: 1fr 1fr; }
+      .photo-grid .photo-wide { grid-column: span 2; }
+      .person-cards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 400px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .photo-grid .photo-wide { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <a href="om-nidingen.html">Om Nidingen</a>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html" class="active">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="foreningen.html">Föreningen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Rapport från Årsmötet</span>
+    </div>
+  </nav>
+
+  <!-- ===== ARTIKELHERO ===== -->
+  <div class="article-hero">
+    <div class="article-hero-content">
+      <span class="eyebrow">Föreningen &bull; Aktuellt</span>
+      <h1>Rapport från Årsmötet</h1>
+      <p style="color:rgba(255,255,255,0.78); max-width:580px; margin:0 auto; font-size:1.05rem;">
+        Nidingens Vänner höll sitt ordinarie årsmöte på Hamnkrogen i Gottskär – ett möte präglat av
+        tacksamhet, minnen och förväntningar inför framtiden.
+      </p>
+      <div class="article-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          2025
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Hamnkrogen, Gottskär
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Nidingens Vänner
+        </span>
+      </div>
+    </div>
+    <div class="article-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== ARTIKELINNEHÅLL ===== -->
+  <div class="article-body">
+
+    <a href="foreningen.html" class="back-link">Tillbaka till Föreningen</a>
+
+    <p class="article-lead">
+      Föreningen Nidingens Vänner samlades till ordinarie årsmöte på den anrika Hamnkrogen i Gottskär –
+      en passande plats för en förening med djupa rötter i Kungsbacka skärgård. Mötet präglades av
+      gott kamratskap, blickar bakåt och en gemensam vilja att fortsätta det viktiga bevarandearbetet.
+    </p>
+
+    <h2>Mötet på Hamnkrogen</h2>
+    <p>
+      Hamnkrogen i Gottskär stod värd för årets välbesökta årsmöte. I den trivsamma miljön, med
+      utsikt mot skärgården, samlades föreningens medlemmar för att gå igenom det gångna årets
+      verksamhet, se över ekonomin och blicka framåt mot nya projekt och utmaningar.
+    </p>
+    <p>
+      Stämningen var varm och engagerad. Bevarandearbetet på Nidingen – med renoveringar av de
+      historiska dubbelfyrarna och arbete med de omkringliggande byggnaderna – stod högt på agendan
+      och mötte stort engagemang bland de närvarande.
+    </p>
+
+    <!-- Bilder från mötet -->
+    <div class="photo-grid">
+      <img src="Bilder årsmöte/IMG_7982.jpg" alt="Årsmötet på Hamnkrogen"
+           class="photo-wide" onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+      <img src="Bilder årsmöte/IMG_7988.jpg" alt="Deltagare vid årsmötet"
+           onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+      <img src="Bilder årsmöte/IMG_7958.jpg" alt="Stämning på Hamnkrogen"
+           onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+      <img src="Bilder årsmöte/IMG_7961.jpg" alt="Föreningsmedlemmar"
+           onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+      <img src="Bilder årsmöte/IMG_7995.jpg" alt="Diskussion vid mötet"
+           onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+      <img src="Bilder årsmöte/IMG_8001.jpg" alt="Avslutning av mötet"
+           onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+    </div>
+
+    <h2>Styrelseväxling – ett varmt tack och ett hjärtligt välkomnande</h2>
+    <p>
+      Årets möte innebar en viktig förändring i föreningens ledning. Efter lång och hängiven tjänst
+      lämnar Elisabeth Adman Hedestad över ordförandeklubban till Karl-Johan Thorell.
+    </p>
+
+    <div class="person-cards">
+      <div class="person-card">
+        <span class="role-badge role-badge--outgoing">Avgående ordförande</span>
+        <h3>Elisabeth Adman Hedestad</h3>
+        <p>
+          Elisabeth har under sin tid som ordförande lagt en gedigen grund för föreningens arbete.
+          Med ett brinnande engagemang för Nidingens kulturarv har hon drivit bevarandearbetet
+          framåt, knutit viktiga samarbeten och samlat frivilliga kring ett gemensamt syfte.
+          Hennes insats för föreningen är ovärderlig och hennes avtryck i Nidingens historia består.
+        </p>
+        <p style="margin-top:0.75rem; font-style:italic; color:var(--muted);">
+          "Tack, Elisabeth, för allt du gjort för Nidingen och föreningen – ditt engagemang
+          lever vidare i varje sten vi bevarar."
+        </p>
+      </div>
+      <div class="person-card">
+        <span class="role-badge role-badge--incoming">Ny ordförande</span>
+        <h3>Karl-Johan Thorell</h3>
+        <p>
+          Karl-Johan Thorell välkomnas varmt som ny ordförande för Nidingens Vänner. Med ett
+          starkt engagemang för föreningens uppdrag och en tydlig vision för framtiden tar
+          han vid stafettpinnen med stor entusiasm.
+        </p>
+        <p style="margin-top:0.75rem; font-style:italic; color:var(--muted);">
+          "Välkommen, Karl-Johan! Vi ser fram emot att fortsätta det viktiga arbetet med
+          dig i spetsen."
+        </p>
+      </div>
+    </div>
+
+    <h2>Blickar framåt</h2>
+    <p>
+      Mötet avslutades med gemensam middag på Hamnkrogen och samtal om kommande säsongs
+      planer. På agendan för det kommande året finns fortsatta restaureringsinsatser på
+      dubbelfyrarna, utökade besöksmöjligheter samt arbete med att stärka föreningens
+      synlighet och förankring i lokalsamhället.
+    </p>
+    <p>
+      Vill du vara med och bidra till Nidingens framtid? Bli medlem eller hör av dig till
+      oss för att lära dig mer om hur du kan engagera dig.
+    </p>
+
+    <div style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;">
+      <a href="foreningen.html#bli-medlem" class="btn btn-primary">Bli Medlem</a>
+      <a href="foreningen.html#kontakt"    class="btn btn-outline-navy">Kontakta oss</a>
+    </div>
+
+  </div>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Historik</a></li>
+            <li><a href="om-nidingen.html#fyren">Dubbelfyrarna</a></li>
+            <li><a href="om-nidingen.html#faglar">Fågelstationen</a></li>
+            <li><a href="om-nidingen.html#natur">Natur &amp; geografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#lagenheten">Boendet</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#butik">Butik</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Stäng">&times;</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+  </div>
+
+  <script>
+    function openLightbox(src, alt) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt || '';
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>

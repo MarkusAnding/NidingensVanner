@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidingens Vänner – Välkommen till Nidingen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Notisband -->
+  <div class="alert-banner">
+    Nidingen firar 400 år! &nbsp;–&nbsp; <a href="foreningen.html">Läs om jubileumsåret 2024 och kommande aktiviteter</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html" class="active">Start</a>
+        <a href="om-nidingen.html">Om Nidingen</a>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== BILDSPEL ===== -->
+  <section class="slideshow" id="bildspel">
+
+    <!-- Bilder -->
+    <div class="slide active" style="background-image:url('Bildspel/IMG_4384.jpg'); background-position: center 30%;"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4393.jpg'); background-position: center 40%;"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4394.jpg'); background-position: center 40%;"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4404.jpg'); background-position: center 20%;"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4420.jpg'); background-position: center 22%;"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4425.jpg'); background-position: center 60%;"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4456.jpg')"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4465.jpg')"></div>
+    <div class="slide"        style="background-image:url('Bildspel/IMG_4486.jpg')"></div>
+
+    <!-- Textoverlay -->
+    <div class="slideshow-overlay">
+      <h2 class="slide-location">NIDINGEN</h2>
+      <p class="slide-coords">N&thinsp;57°18.129'&ensp;&middot;&ensp;E&thinsp;11°54.050'</p>
+    </div>
+
+    <!-- Pilar -->
+    <button class="slide-arrow slide-arrow--prev" aria-label="Föregående bild" onclick="slideshowPrev()">&#8249;</button>
+    <button class="slide-arrow slide-arrow--next" aria-label="Nästa bild"       onclick="slideshowNext()">&#8250;</button>
+
+    <!-- Punktnavigering -->
+    <div class="slide-dots">
+      <button class="slide-dot active" onclick="slideshowGo(0)" aria-label="Bild 1"></button>
+      <button class="slide-dot"        onclick="slideshowGo(1)" aria-label="Bild 2"></button>
+      <button class="slide-dot"        onclick="slideshowGo(2)" aria-label="Bild 3"></button>
+      <button class="slide-dot"        onclick="slideshowGo(3)" aria-label="Bild 4"></button>
+      <button class="slide-dot"        onclick="slideshowGo(4)" aria-label="Bild 5"></button>
+      <button class="slide-dot"        onclick="slideshowGo(5)" aria-label="Bild 6"></button>
+      <button class="slide-dot"        onclick="slideshowGo(6)" aria-label="Bild 7"></button>
+      <button class="slide-dot"        onclick="slideshowGo(7)" aria-label="Bild 8"></button>
+      <button class="slide-dot"        onclick="slideshowGo(8)" aria-label="Bild 9"></button>
+    </div>
+  </section>
+
+  <!-- ===== VÄLKOMSTSEKTION ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Kungsbacka skärgård &bull; Halland</span>
+      <h1>Välkommen till Nidingen</h1>
+      <p class="hero-lead">
+        En unik ö med 400 år av maritim historia. Hem till Sveriges historiska dubbelfyrar,
+        en av landets bästa fågelstationer och storslagna naturupplevelser längs Hallandskusten.
+      </p>
+      <div class="hero-actions">
+        <a href="besoka.html" class="btn btn-primary">Planera ditt besök</a>
+        <a href="om-nidingen.html" class="btn btn-outline-white">Utforska historien</a>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Bildspels-JavaScript -->
+  <script>
+    (function () {
+      const slides = document.querySelectorAll('.slideshow .slide');
+      const dots   = document.querySelectorAll('.slide-dot');
+      let current  = 0;
+      let timer;
+
+      function show(n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function reset() {
+        clearInterval(timer);
+        timer = setInterval(() => show(current + 1), 5500);
+      }
+
+      window.slideshowGo   = function(n) { show(n); reset(); };
+      window.slideshowNext = function()  { show(current + 1); reset(); };
+      window.slideshowPrev = function()  { show(current - 1); reset(); };
+
+      timer = setInterval(() => show(current + 1), 5500);
+
+      /* Swipe-stöd på mobil */
+      let touchX = null;
+      const el = document.querySelector('.slideshow');
+      el.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      el.addEventListener('touchend',   e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) dx < 0 ? slideshowNext() : slideshowPrev();
+        touchX = null;
+      }, { passive: true });
+    })();
+  </script>
+
+  <!-- ===== FEATURE-KORT ===== -->
+  <section class="section" style="padding-top: 4rem">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Utforska</span>
+        <h2>Allt om Nidingen – samlat på ett ställe</h2>
+        <p>Oavsett om du vill besöka ön, lära dig om historien eller engagera dig i bevarandearbetet – välj din väg nedan.</p>
+      </div>
+      <div class="grid-3">
+        <a href="om-nidingen.html" class="feature-card">
+          <div class="feature-icon">🏛️</div>
+          <h3>Om Nidingen</h3>
+          <p>Lär dig om ön, de historiska dubbelfyrarna, fågelstationen och den unika naturen i Kungsbacka skärgård.</p>
+          <span class="more-link">Läs mer</span>
+        </a>
+        <a href="besoka.html" class="feature-card">
+          <div class="feature-icon">⛵</div>
+          <h3>Besöka Nidingen</h3>
+          <p>Praktisk information om hur du tar dig till ön, vad du kan uppleva, och om föreningens boende på ön.</p>
+          <span class="more-link">Planera besök</span>
+        </a>
+        <a href="foreningen.html" class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Om Föreningen</h3>
+          <p>Bli en del av arbetet med att bevara Nidingens kulturarv. Bli medlem, stötta ekonomiskt eller delta praktiskt.</p>
+          <span class="more-link">Engagera dig</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAKTABAND ===== -->
+  <section style="background: var(--sand-light); padding: 3rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="grid-4">
+        <div class="stat-box">
+          <div class="stat-number">1624</div>
+          <div class="stat-label">Fyren tändes första gången</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">400+</div>
+          <div class="stat-label">År av maritim historia</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">250+</div>
+          <div class="stat-label">Fågelarter observerade</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Historiska fyrtorn – ett unikt par</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OM ÖN ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">Vår historia</span>
+          <h2>En ö med djupa rötter i havet</h2>
+          <p>
+            Nidingen är en liten ö belägen i Kungsbacka skärgård utanför Hallandskusten. Ön är känd
+            för sina dubbelfyrar – ett unikt system med en östlig och en västlig fyr som tillsammans
+            guidar sjöfarare förbi de farliga grunden.
+          </p>
+          <p>
+            Fyrarna på Nidingen är bland de äldsta i Sverige, med anor från 1624. Under seklerna
+            har de stått som stilla vittnen till otaliga segelfartyg, handelsskepp och fiskefartyg
+            passera utmed kusten.
+          </p>
+          <p>
+            Idag förvaltar föreningen <em>Nidingens Vänner</em> detta unika arv, i samarbete med
+            Statens Fastighetsverk, med målet att bevara byggnaderna och sprida kunskap om öns historia.
+          </p>
+          <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
+            <a href="om-nidingen.html" class="btn btn-ocean">Läs mer om historien</a>
+            <a href="besoka.html" class="btn btn-outline-navy">Besök ön</a>
+          </div>
+        </div>
+        <div class="img-ph" style="height: 420px;">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21,15 16,10 5,21"/>
+          </svg>
+          <span>Bild: Nidingen – vy från havet med dubbelfyrarna</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AKTUELLT ===== -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Nyheter</span>
+        <h2>Aktuellt från Nidingen</h2>
+        <p>Håll dig uppdaterad om pågående renoveringsarbeten, evenemang och föreningens verksamhet.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-img-ph">Bild: Renoverade dörrar, västra fyren</div>
+          <div class="card-body">
+            <span class="card-tag">Renovering</span>
+            <h3>Dörrar nyrenoverade på västra fyren</h3>
+            <p>Restaureringsarbetet med dörrarna på den västra fyren är avslutat. Arbetet har utförts enligt antikvarisk standard.</p>
+            <a href="#" class="more-link" style="margin-bottom:0">Läs mer</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Jubileumsaktiviteter 2024</div>
+          <div class="card-body">
+            <span class="card-tag">Jubileum</span>
+            <h3>Nidingen firar 400 år – 2024</h3>
+            <p>Under 2024 firades fyrplatsen på Nidingen 400-årsjubileum med evenemang och visningar.</p>
+            <a href="#" class="more-link" style="margin-bottom:0">Läs mer</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Verksamhetsberättelse 2025</div>
+          <div class="card-body">
+            <span class="card-tag">Föreningen</span>
+            <h3>Verksamhetsberättelse 2025</h3>
+            <p>Läs om föreningens arbete under 2025 – renoveringar, besöksstatistik och planerna inför kommande säsong.</p>
+            <a href="#" class="more-link" style="margin-bottom:0">Läs mer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BILDGALLERI (platshållare) ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Bilder</span>
+        <h2>Nidingens skönhet i bilder</h2>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 220px 220px; gap:1rem;">
+        <div class="img-ph" style="grid-row: span 2; border-radius:var(--radius-lg)">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21,15 16,10 5,21"/>
+          </svg>
+          <span>Bild: Fyrtornen på Nidingen</span>
+        </div>
+        <div class="img-ph" style="border-radius:var(--radius-lg)">
+          <span>Bild: Fågelstationen</span>
+        </div>
+        <div class="img-ph" style="border-radius:var(--radius-lg)">
+          <span>Bild: Sjöutsikt från ön</span>
+        </div>
+        <div class="img-ph" style="border-radius:var(--radius-lg)">
+          <span>Bild: Renoveringsarbete</span>
+        </div>
+        <div class="img-ph" style="border-radius:var(--radius-lg)">
+          <span>Bild: Nidingen höst</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA MEDLEMSKAP ===== -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center; max-width:700px">
+      <span class="eyebrow">Engagera dig</span>
+      <h2>Bli en del av Nidingens Vänner</h2>
+      <p style="color:rgba(255,255,255,0.75); font-size:1.05rem; margin-bottom:2rem;">
+        Stöd arbetet med att bevara Nidingens unika kulturarv för kommande generationer.
+        Som medlem bidrar du direkt till restaurerings- och bevarandearbetet av ett unikt stycke svensk historia.
+      </p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="foreningen.html#bli-medlem" class="btn btn-primary">Bli Medlem</a>
+        <a href="foreningen.html" class="btn btn-outline-white">Mer om föreningen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard, samt för att främja besök och sprida kunskap om öns historia.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Historik</a></li>
+            <li><a href="om-nidingen.html#fyren">Dubbelfyrarna</a></li>
+            <li><a href="om-nidingen.html#faglar">Fågelstationen</a></li>
+            <li><a href="om-nidingen.html#natur">Natur &amp; geografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#lagenheten">Boendet</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#butik">Butik</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

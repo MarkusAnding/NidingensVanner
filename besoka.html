@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Besöka Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <a href="om-nidingen.html">Om Nidingen</a>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger active">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Besöka Nidingen</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Besöka Nidingen</h1>
+      <p>Upplev fyrarna, fågellivet och det storslagna kustlandskapet. Här är allt du behöver veta inför ditt besök.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== SNABBINFO ===== -->
+  <section style="padding: 3rem 0; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="grid-4">
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">⛵</div>
+          <strong style="display:block; color:var(--navy); font-size:0.9rem;">Båt</strong>
+          <span style="font-size:0.82rem; color:var(--muted);">Enda sättet att ta sig dit</span>
+        </div>
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🌤️</div>
+          <strong style="display:block; color:var(--navy); font-size:0.9rem;">Vår–Höst</strong>
+          <span style="font-size:0.82rem; color:var(--muted);">Bästa besökssäsongen</span>
+        </div>
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🏠</div>
+          <strong style="display:block; color:var(--navy); font-size:0.9rem;">Boende</strong>
+          <span style="font-size:0.82rem; color:var(--muted);">Lägenhet på ön</span>
+        </div>
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🦅</div>
+          <strong style="display:block; color:var(--navy); font-size:0.9rem;">Fågelskådning</strong>
+          <span style="font-size:0.82rem; color:var(--muted);">250+ arter observerade</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HITTA DIT ===== -->
+  <section class="section" id="hitta">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">Transport</span>
+          <h2>Hur tar du dig till Nidingen?</h2>
+          <p>
+            Nidingen nås uteslutande med båt. Det finns ingen fast färjetrafik till ön, så
+            besökare behöver ta sig dit med privat båt eller arrangera transport via lokala
+            båtklubbar eller charterföretag.
+          </p>
+
+          <h3 style="margin-top:1.75rem;">Från Onsala</h3>
+          <p>
+            Onsala är den närmaste utgångspunkten. Härifrån är det en kortare båtresa ut till
+            Nidingen. Kontakta Onsala Sjöfartsmuseum eller lokala båtsällskap för information
+            om eventuell samåkning eller organiserade turer.
+          </p>
+
+          <h3 style="margin-top:1.5rem;">Från Göteborg</h3>
+          <p>
+            Från Göteborg kan man ta sig via bil till Onsala och sedan med båt ut till ön.
+            Restid med bil till Onsala är ca 45–60 minuter beroende på avgångspunkt.
+          </p>
+
+          <div style="background:var(--sand); border-left:4px solid var(--ocean); border-radius:var(--radius); padding:1.25rem 1.5rem; margin-top:1.75rem;">
+            <strong style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--navy);">Tips</strong>
+            <p style="margin-top:0.5rem; font-size:0.9rem; color:var(--text-mid); margin-bottom:0;">
+              Kontakta föreningen i förväg för råd om transport och för att stämma av om
+              det finns organiserade besök planerade under din önskade period.
+            </p>
+          </div>
+        </div>
+        <div>
+          <!-- Karteplatshållare -->
+          <div class="img-ph" style="height:340px; margin-bottom:1rem;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+              <line x1="9" y1="3" x2="9" y2="18"/>
+              <line x1="15" y1="6" x2="15" y2="21"/>
+            </svg>
+            <span>Karta: Nidingen och omgivande farvatten</span>
+          </div>
+          <div style="background:var(--sand-light); border-radius:var(--radius); padding:1.25rem; border:1px solid var(--border);">
+            <strong style="font-size:0.88rem; color:var(--navy);">Koordinater</strong><br>
+            <span style="font-size:0.85rem; color:var(--muted); font-family:monospace;">57°18′N, 11°54′Ö</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VAD KAN DU GÖRA ===== -->
+  <section class="section section--sand" id="aktiviteter">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Aktiviteter</span>
+        <h2>Vad kan du uppleva på Nidingen?</h2>
+        <p>Trots sin begränsade storlek erbjuder Nidingen en rik mängd upplevelser för besökaren.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-img-ph">Bild: Fyrbesök och guidning</div>
+          <div class="card-body">
+            <span class="card-tag">Kulturarv</span>
+            <h3>Besök dubbelfyrarna</h3>
+            <p>Utforska de historiska fyrtornen och lär dig om deras roll i sjöfartens historia. Under sommarsäsongen kan organiserade visningar arrangeras.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Fågelskådning vid stationen</div>
+          <div class="card-body">
+            <span class="card-tag">Naturupplevelse</span>
+            <h3>Fågelskådning</h3>
+            <p>Nidingen är ett av landets bästa ställen för fågelskådning. Under sträckperioderna vår och höst kan spektakulära mängder fåglar observeras.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Vandring längs kusten</div>
+          <div class="card-body">
+            <span class="card-tag">Friluftsliv</span>
+            <h3>Vandring och natur</h3>
+            <p>Utforska öns kustlinje, klippor och strandängar. Det öppna kustlandskapet ger enastående utsikter och ett unikt naturmöte.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Historiska byggnader</div>
+          <div class="card-body">
+            <span class="card-tag">Historia</span>
+            <h3>Historiska byggnader</h3>
+            <p>Utöver fyrarna finns fyrvaktarbostaden och andra historiska byggnader som berättar om livet på ön under de sekel som gått.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Solnedgång och fototur</div>
+          <div class="card-body">
+            <span class="card-tag">Foto</span>
+            <h3>Fotografi</h3>
+            <p>Öns öppna läge, fyrarna och det dramatiska ljuset gör Nidingen till ett fantastiskt resmål för fotografer – oavsett årstid.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Stillhet och avkoppling</div>
+          <div class="card-body">
+            <span class="card-tag">Avkoppling</span>
+            <h3>Stillhet och ro</h3>
+            <p>Utan bilar och med begränsat antal besökare erbjuder Nidingen en sällsynt möjlighet till lugn och avkoppling omgiven av hav och natur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LÄGENHETEN ===== -->
+  <section class="section" id="lagenheten">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Boende på ön</span>
+        <h2>Övernatta på Nidingen</h2>
+        <p>Det finns två möjligheter att övernatta på ön – föreningens lägenhet och den charmiga Bagarstugan.</p>
+      </div>
+      <div class="grid-2" style="align-items:start; gap:2rem;">
+
+        <!-- Lägenheten -->
+        <div style="background:var(--white); border-radius:var(--radius-lg); box-shadow:var(--shadow); overflow:hidden;">
+          <img src="Bilder Lägenhet/var_lagenhet.jpg" alt="Lägenheten på Nidingen"
+               style="width:100%; height:220px; object-fit:cover;">
+          <div style="padding:1.75rem;">
+            <h3>Föreningens Lägenhet</h3>
+            <p style="color:var(--text-mid); font-size:0.9rem;">
+              Föreningen hyr en liten lägenhet på Nidingen för sina medlemmar – ett unikt tillfälle att bo mitt i det maritima kulturarvet. Lägenheten har fyra bäddar och fullt utrustat kök.
+            </p>
+            <div style="font-size:0.85rem; color:var(--text-mid); margin-bottom:1.25rem;">
+              <div style="display:flex; gap:0.5rem; margin-bottom:0.3rem;">
+                <span style="color:var(--gold); font-weight:700;">✓</span> 4 bäddar &bull; Kök &bull; 200 kr/bädd/natt
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <span style="color:var(--gold); font-weight:700;">✓</span> Kräver medlemskap i Nidingens Vänner
+              </div>
+            </div>
+            <a href="bo-pa-nidingen.html#lagenheten" class="btn btn-ocean" style="width:100%; justify-content:center;">Boka Lägenheten</a>
+          </div>
+        </div>
+
+        <!-- Bagarstugan -->
+        <div style="background:var(--white); border-radius:var(--radius-lg); box-shadow:var(--shadow); overflow:hidden;">
+          <div class="img-ph" style="height:220px; border-radius:0;">
+            <span>Bild: Bagarstugan på Nidingen</span>
+          </div>
+          <div style="padding:1.75rem;">
+            <h3>Bagarstugan</h3>
+            <p style="color:var(--text-mid); font-size:0.9rem;">
+              Den pittoreska Bagarstugan erbjuder ett charmigt boende med anor från öns aktiva tid som fyrplats. Bokas via Destination Gottskär-Nidingen.
+            </p>
+            <div style="font-size:0.85rem; color:var(--text-mid); margin-bottom:1.25rem;">
+              <div style="display:flex; gap:0.5rem; margin-bottom:0.3rem;">
+                <span style="color:var(--gold); font-weight:700;">✓</span> Historiskt boende &bull; Unikt läge
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <span style="color:var(--gold); font-weight:700;">✓</span> Bokas via Destination Gottskär-Nidingen
+              </div>
+            </div>
+            <a href="bo-pa-nidingen.html#bagarstugan" class="btn btn-outline-navy" style="width:100%; justify-content:center;">Boka Bagarstugan</a>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="bo-pa-nidingen.html" class="btn btn-primary">Mer om boende &amp; bokning →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRAKTISK INFO ===== -->
+  <section class="section section--sand" id="praktiskt">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Förberedelser</span>
+        <h2>Praktisk information inför besöket</h2>
+      </div>
+      <div class="grid-2" style="align-items:start; gap:2.5rem;">
+        <div>
+          <h3 style="margin-bottom:1.25rem;">Ta med dig</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem;">
+            <li style="display:flex; gap:0.75rem; align-items:flex-start; font-size:0.92rem; color:var(--text-mid);">
+              <span style="color:var(--gold); font-weight:700; flex-shrink:0;">✓</span>
+              <span><strong style="color:var(--text);">Vindtäta kläder</strong> – Nidingen är utsatt för vind från havet, oavsett årstid.</span>
+            </li>
+            <li style="display:flex; gap:0.75rem; align-items:flex-start; font-size:0.92rem; color:var(--text-mid);">
+              <span style="color:var(--gold); font-weight:700; flex-shrink:0;">✓</span>
+              <span><strong style="color:var(--text);">Kikare</strong> – Oumbärligt för fågelskådning och att betrakta havslandskapet.</span>
+            </li>
+            <li style="display:flex; gap:0.75rem; align-items:flex-start; font-size:0.92rem; color:var(--text-mid);">
+              <span style="color:var(--gold); font-weight:700; flex-shrink:0;">✓</span>
+              <span><strong style="color:var(--text);">Mat och vatten</strong> – Det finns ingen butik på ön. Ta med tillräckligt med proviant.</span>
+            </li>
+            <li style="display:flex; gap:0.75rem; align-items:flex-start; font-size:0.92rem; color:var(--text-mid);">
+              <span style="color:var(--gold); font-weight:700; flex-shrink:0;">✓</span>
+              <span><strong style="color:var(--text);">Solskydd</strong> – Det öppna läget ger lite skugga under varma dagar.</span>
+            </li>
+            <li style="display:flex; gap:0.75rem; align-items:flex-start; font-size:0.92rem; color:var(--text-mid);">
+              <span style="color:var(--gold); font-weight:700; flex-shrink:0;">✓</span>
+              <span><strong style="color:var(--text);">Kamera</strong> – Nidingen bjuder på fantastiska fotomotiv i alla riktningar.</span>
+            </li>
+            <li style="display:flex; gap:0.75rem; align-items:flex-start; font-size:0.92rem; color:var(--text-mid);">
+              <span style="color:var(--gold); font-weight:700; flex-shrink:0;">✓</span>
+              <span><strong style="color:var(--text);">Nyfikenhet</strong> – Det finns alltid något nytt att upptäcka på Nidingen.</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1.25rem;">Bra att veta</h3>
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div style="background:var(--white); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow);">
+              <strong style="font-size:0.88rem; color:var(--navy);">🌊 Väderberoende</strong>
+              <p style="font-size:0.87rem; color:var(--text-mid); margin-top:0.4rem; margin-bottom:0;">
+                Besöket är helt beroende av vädret. Håll koll på väder- och vindprognoser
+                och var beredd på att ändra planer.
+              </p>
+            </div>
+            <div style="background:var(--white); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow);">
+              <strong style="font-size:0.88rem; color:var(--navy);">🔇 Respektera naturreservatet</strong>
+              <p style="font-size:0.87rem; color:var(--text-mid); margin-top:0.4rem; margin-bottom:0;">
+                Delar av ön kan ha besöksrestriktioner, särskilt under häckningssäsongen.
+                Följ alltid skyltar och anvisningar på plats.
+              </p>
+            </div>
+            <div style="background:var(--white); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow);">
+              <strong style="font-size:0.88rem; color:var(--navy);">📵 Begränsad mobilkontakt</strong>
+              <p style="font-size:0.87rem; color:var(--text-mid); margin-top:0.4rem; margin-bottom:0;">
+                Mobiltäckningen på Nidingen kan vara osäker. Informera gärna någon
+                om dina planer innan du reser ut till ön.
+              </p>
+            </div>
+            <div style="background:var(--white); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow);">
+              <strong style="font-size:0.88rem; color:var(--navy);">🗑️ Ta med sopor hem</strong>
+              <p style="font-size:0.87rem; color:var(--text-mid); margin-top:0.4rem; margin-bottom:0;">
+                Ön har inget sophanteringssystem. Ta med dig allt skräp tillbaka till fastlandet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA KONTAKT ===== -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center; max-width:660px;">
+      <span class="eyebrow">Frågor?</span>
+      <h2>Kontakta oss inför ditt besök</h2>
+      <p style="color:rgba(255,255,255,0.72); font-size:1.05rem; margin-bottom:2rem;">
+        Har du frågor om hur du tar dig till Nidingen, om lägenheten eller om öns historia?
+        Vi hjälper dig gärna!
+      </p>
+      <a href="foreningen.html#kontakt" class="btn btn-primary">Skicka ett meddelande</a>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Historik</a></li>
+            <li><a href="om-nidingen.html#fyren">Dubbelfyrarna</a></li>
+            <li><a href="om-nidingen.html#faglar">Fågelstationen</a></li>
+            <li><a href="om-nidingen.html#natur">Natur &amp; geografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#lagenheten">Boendet</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#butik">Butik</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

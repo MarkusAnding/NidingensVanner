@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Föreningen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <a href="om-nidingen.html">Om Nidingen</a>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html" class="active">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Om Föreningen</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Nidingens Vänner</h1>
+      <p>Vi arbetar för att bevara dubbelfyrarna och öns historia – för nuvarande och kommande generationer.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== OM FÖRENINGEN ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">Vår verksamhet</span>
+          <h2>Om Nidingens Vänner</h2>
+          <p>
+            Föreningen Nidingens Vänner bildades med ett tydligt syfte: att bevara de unika
+            dubbelfyrarna och omkringliggande byggnader på Nidingen för framtiden. Arbetet sker
+            i nära samarbete med Statens Fastighetsverk som äger fastigheterna.
+          </p>
+          <p>
+            Vi arbetar för att restaurera och underhålla byggnaderna enligt antikvarisk standard,
+            vilket innebär att alla åtgärder respekterar och bevarar det historiska ursprunget.
+            Föreningens frivilliga bidrar med både praktiskt arbete och ekonomiskt stöd.
+          </p>
+          <p>
+            Utöver bevarandearbetet arbetar föreningen aktivt med att sprida kunskap om Nidingens
+            historia och att välkomna besökare till ön. Vi samarbetar med Onsala Sjöfartsmuseum,
+            Svenska Fyrsällskapet och Nidingens Fågelstation.
+          </p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div style="background:var(--sand-light); border-radius:var(--radius-lg); padding:2rem; border:1px solid var(--border);">
+            <div style="font-size:2.2rem; margin-bottom:0.75rem;">🔦</div>
+            <h4>Bevara</h4>
+            <p style="font-size:0.88rem; color:var(--text-mid); margin-bottom:0;">
+              Restaurering och underhåll av dubbelfyrarna och historiska byggnader
+              enligt antikvarisk standard.
+            </p>
+          </div>
+          <div style="background:var(--sand-light); border-radius:var(--radius-lg); padding:2rem; border:1px solid var(--border);">
+            <div style="font-size:2.2rem; margin-bottom:0.75rem;">📖</div>
+            <h4>Sprida kunskap</h4>
+            <p style="font-size:0.88rem; color:var(--text-mid); margin-bottom:0;">
+              Informera och engagera allmänheten om Nidingens historia och kulturarv
+              genom besök, event och publikationer.
+            </p>
+          </div>
+          <div style="background:var(--sand-light); border-radius:var(--radius-lg); padding:2rem; border:1px solid var(--border);">
+            <div style="font-size:2.2rem; margin-bottom:0.75rem;">🤝</div>
+            <h4>Samverka</h4>
+            <p style="font-size:0.88rem; color:var(--text-mid); margin-bottom:0;">
+              Samarbeta med myndigheter, museer och organisationer för ett starkt
+              nätverk kring Nidingens framtid.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AKTUELLT / NYHETER ===== -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Nyheter</span>
+        <h2>Aktuellt från föreningen</h2>
+      </div>
+      <div class="grid-3">
+        <a href="arsmode-rapport.html" style="text-decoration:none; color:inherit; display:block;">
+          <div class="card">
+            <img src="Bilder årsmöte/IMG_7982.jpg" alt="Årsmöte 2025" class="card-img" style="width:100%;height:200px;object-fit:cover;">
+            <div class="card-body">
+              <span class="card-tag">Föreningen</span>
+              <h3>Rapport från Årsmötet</h3>
+              <p>Årets årsmöte hölls på Hamnkrogen i Gottskär. Vi tackar avgående ordförande och välkomnar ny ledning.</p>
+              <span class="more-link" style="margin-bottom:0">Läs mer</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="card">
+          <div class="card-img-ph">Bild: Renoveringsarbete 2025</div>
+          <div class="card-body">
+            <span class="card-tag">Renovering</span>
+            <h3>Dörrar nyrenoverade på västra fyren</h3>
+            <p>Restaureringsarbetet med dörrarna på den västra fyren är nu avslutat och har utförts enligt antikvarisk standard.</p>
+            <a href="#" class="more-link" style="margin-bottom:0">Läs mer</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Årsmöte 2026</div>
+          <div class="card-body">
+            <span class="card-tag">Föreningen</span>
+            <h3>Kallelse till Årsmöte 2026</h3>
+            <p>Föreningen kallar alla medlemmar till ordinarie årsmöte. Datum och plats publiceras på hemsidan och skickas ut till medlemmar.</p>
+            <a href="#" class="more-link" style="margin-bottom:0">Läs mer</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-ph">Bild: Verksamhetsberättelse 2025</div>
+          <div class="card-body">
+            <span class="card-tag">Verksamhet</span>
+            <h3>Verksamhetsberättelse 2025</h3>
+            <p>Läs om föreningens arbete under 2025 – renoveringsinsatser, besöksstatistik och planerna inför kommande säsong.</p>
+            <a href="#" class="more-link" style="margin-bottom:0">Ladda ner PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLI MEDLEM ===== -->
+  <section class="section" id="bli-medlem">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Engagera dig</span>
+        <h2>Bli medlem i Nidingens Vänner</h2>
+        <p>Ditt medlemskap är avgörande för att vi ska kunna fortsätta bevarandearbetet på Nidingen.</p>
+      </div>
+      <div style="display:flex; gap:2rem; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+
+        <!-- Enskilt medlemskap -->
+        <div class="member-box">
+          <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ocean); margin-bottom:0.75rem;">Enskilt Medlemskap</div>
+          <div class="member-price">150 <small>kr</small></div>
+          <div class="period">per år</div>
+          <a href="foreningen.html#kontakt" class="btn btn-outline-navy" style="width:100%; justify-content:center; margin-top:0.5rem;">Bli Medlem</a>
+          <div class="swish-wrap">
+            <img src="Swish Medlemsskap.png" alt="Swish QR-kod – Enskilt Medlemskap"
+                 onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+            <div class="swish-label">Klicka på QR-koden för att förstora</div>
+          </div>
+        </div>
+
+        <!-- Familjemedlemskap – rekommenderat -->
+        <div class="member-box member-box--featured">
+          <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;">Familjemedlemskap</div>
+          <div class="member-price">200 <small>kr</small></div>
+          <div class="period">per år</div>
+          <a href="foreningen.html#kontakt" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:0.5rem;">Bli Familjemedlem</a>
+          <div class="swish-wrap">
+            <img src="Swish FamiljeMedlemsskap.png" alt="Swish QR-kod – Familjemedlemskap"
+                 onclick="openLightbox(this.src, this.alt)" title="Klicka för att förstora">
+            <div class="swish-label">Klicka på QR-koden för att förstora</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STYRELSE ===== -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Styrelsen</span>
+        <h2>Föreningens styrelse</h2>
+        <p>Föreningen leds av en engagerad styrelse som arbetar ideellt för Nidingens bästa.</p>
+      </div>
+      <div class="grid-4">
+        <div class="board-card">
+          <div class="board-avatar">JE</div>
+          <h4>Johan Elvborn</h4>
+          <p>Renoveringsansvarig</p>
+          <a href="mailto:johanelborn@hotmail.com" style="font-size:0.78rem; color:var(--ocean);">johanelborn@hotmail.com</a>
+        </div>
+        <div class="board-card">
+          <div class="board-avatar">EA</div>
+          <h4>Elisabeth Adman Hedestad</h4>
+          <p>Butik &amp; försäljning</p>
+          <a href="mailto:elisabeth.hedestad@gmail.com" style="font-size:0.78rem; color:var(--ocean);">elisabeth.hedestad@gmail.com</a>
+        </div>
+        <div class="board-card">
+          <div class="board-avatar" style="background:var(--ocean);">–</div>
+          <h4>Ordförande</h4>
+          <p>Plats att fylla</p>
+          <span style="font-size:0.78rem; color:var(--muted);">info@nidingensvanner.se</span>
+        </div>
+        <div class="board-card">
+          <div class="board-avatar" style="background:var(--ocean);">–</div>
+          <h4>Kassör</h4>
+          <p>Plats att fylla</p>
+          <span style="font-size:0.78rem; color:var(--muted);">info@nidingensvanner.se</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUTIK ===== -->
+  <section class="section" id="butik">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Butik</span>
+        <h2>Nidingens souvenirer</h2>
+        <p>Bär med dig ett minne från Nidingen hem. Intäkterna går direkt till föreningens bevarandearbete.</p>
+      </div>
+      <div class="grid-3">
+
+        <div class="product-card">
+          <div class="product-img">Bild: Boken "Livet på Nidingen"</div>
+          <div class="product-body">
+            <span class="card-tag">Bok</span>
+            <h3>Livet på Nidingen</h3>
+            <p style="color:var(--text-mid); font-size:0.88rem; margin-bottom:1rem;">
+              En bok om livet och historien på Nidingen. Säljs via Fjärås Lantmanna.
+              Kontakta Elisabeth Adman Hedestad för information och beställning.
+            </p>
+            <div class="product-price">Pris på förfrågan</div>
+            <div class="contact-item" style="margin-bottom:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span style="font-size:0.82rem;">0704 30 16 84</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">Bild: Nidingen-mössa</div>
+          <div class="product-body">
+            <span class="card-tag">Klädsel</span>
+            <h3>Nidingen Mössa</h3>
+            <p style="color:var(--text-mid); font-size:0.88rem; margin-bottom:1rem;">
+              En varm mössa med Nidingens logotyp – perfekt för kyliga dagar till havs
+              eller som minne från ön. Kontakta Elisabeth för beställning.
+            </p>
+            <div class="product-price">120 kr</div>
+            <a href="mailto:elisabeth.hedestad@gmail.com" class="btn btn-ocean" style="padding:0.5rem 1rem; font-size:0.85rem;">Beställ nu</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">Bild: Nidingen-mugg</div>
+          <div class="product-body">
+            <span class="card-tag">Keramik</span>
+            <h3>Nidingen Mugg</h3>
+            <p style="color:var(--text-mid); font-size:0.88rem; margin-bottom:1rem;">
+              En fin mugg med Nidingens motiv – för morgonkaffet med minnen från
+              en unik ö i Kungsbacka skärgård.
+            </p>
+            <div class="product-price">100 kr</div>
+            <a href="mailto:elisabeth.hedestad@gmail.com" class="btn btn-ocean" style="padding:0.5rem 1rem; font-size:0.85rem;">Beställ nu</a>
+          </div>
+        </div>
+
+      </div>
+      <p style="text-align:center; color:var(--muted); font-size:0.85rem; margin-top:2rem;">
+        Kontakta <a href="mailto:elisabeth.hedestad@gmail.com">Elisabeth Adman Hedestad</a>
+        (tel: 0704 30 16 84) för beställning och frågor om butiken.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== KONTAKT ===== -->
+  <section class="section section--sand" id="kontakt">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Hör av dig till oss</h2>
+        <p>Frågor om föreningen, medlemskap, besök eller renovering? Vi svarar gärna.</p>
+      </div>
+      <div class="grid-2" style="gap:4rem; align-items:start;">
+
+        <!-- Kontaktuppgifter -->
+        <div>
+          <h3 style="margin-bottom:1.5rem;">Kontaktuppgifter</h3>
+
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <div>
+              <strong>Allmänna frågor</strong>
+              <span><a href="mailto:info@nidingensvanner.se">info@nidingensvanner.se</a></span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <div>
+              <strong>Johan Elvborn – Renovering</strong>
+              <span>0707 998 519 &nbsp;·&nbsp; <a href="mailto:johanelborn@hotmail.com">johanelborn@hotmail.com</a></span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <div>
+              <strong>Elisabeth Adman Hedestad – Butik</strong>
+              <span>0704 30 16 84 &nbsp;·&nbsp; <a href="mailto:elisabeth.hedestad@gmail.com">elisabeth.hedestad@gmail.com</a></span>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <h4 style="margin-bottom:1rem;">Relaterade organisationer</h4>
+            <div class="partner-list">
+              <a href="#" class="partner-pill">Onsala Sjöfartsmuseum</a>
+              <a href="#" class="partner-pill">Svenska Fyrsällskapet</a>
+              <a href="#" class="partner-pill">Onsala Fyrförening</a>
+              <a href="#" class="partner-pill">Nidingens Fågelstation</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kontaktformulär -->
+        <div>
+          <h3 style="margin-bottom:1.5rem;">Skicka ett meddelande</h3>
+          <form>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group">
+                <label for="fname">Förnamn</label>
+                <input type="text" id="fname" placeholder="Anna">
+              </div>
+              <div class="form-group">
+                <label for="lname">Efternamn</label>
+                <input type="text" id="lname" placeholder="Svensson">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-postadress</label>
+              <input type="email" id="email" placeholder="anna@exempel.se">
+            </div>
+            <div class="form-group">
+              <label for="amne">Ämne</label>
+              <select id="amne">
+                <option value="">– Välj ämne –</option>
+                <option>Bli medlem</option>
+                <option>Besök och transport</option>
+                <option>Boende på ön (lägenheten)</option>
+                <option>Renovering och frivilligarbete</option>
+                <option>Butik och beställningar</option>
+                <option>Övrigt</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="meddelande">Meddelande</label>
+              <textarea id="meddelande" placeholder="Skriv ditt meddelande här…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Skicka meddelande
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Historik</a></li>
+            <li><a href="om-nidingen.html#fyren">Dubbelfyrarna</a></li>
+            <li><a href="om-nidingen.html#faglar">Fågelstationen</a></li>
+            <li><a href="om-nidingen.html#natur">Natur &amp; geografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#lagenheten">Boendet</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medan">Bli Medlem</a></li>
+            <li><a href="foreningen.html#butik">Butik</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Stäng">&times;</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+  </div>
+
+  <script>
+    function openLightbox(src, alt) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt || '';
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bo på Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Bildgalleri för lägenheten */
+    .apt-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 0.75rem;
+    }
+    .apt-gallery img {
+      width: 100%; height: 220px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      cursor: zoom-in;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .apt-gallery img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(13,33,55,0.18);
+    }
+    .apt-gallery img.wide {
+      grid-column: span 2;
+      height: 300px;
+    }
+
+    /* Bokningskort */
+    .booking-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .booking-card-header {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .booking-card-body { padding: 2rem; }
+    .booking-badge {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+    .badge-ocean { background: #dbeafe; color: #1e40af; }
+    .badge-sand  { background: #fef3c7; color: #92400e; }
+
+    /* Info-rad */
+    .info-row {
+      display: flex; align-items: flex-start;
+      gap: 0.75rem; margin-bottom: 0.85rem;
+      font-size: 0.88rem; color: var(--text-mid);
+    }
+    .info-row svg { flex-shrink: 0; color: var(--gold); margin-top: 1px; }
+    .info-row strong { color: var(--text); display: block; font-size: 0.82rem; }
+
+    /* Datum-rad i formulär */
+    .date-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+
+    /* Avdelningslinje */
+    .section-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    /* Regler-lista */
+    .rules-list { list-style: none; margin: 0; padding: 0; }
+    .rules-list li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.88rem; color: var(--text-mid);
+      padding: 0.45rem 0; border-bottom: 1px solid var(--border);
+    }
+    .rules-list li:last-child { border-bottom: none; }
+    .rules-list li .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0; margin-top: 6px;
+    }
+
+    @media (max-width: 600px) {
+      .apt-gallery img.wide { height: 200px; }
+      .apt-gallery img      { height: 160px; }
+      .date-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <a href="om-nidingen.html">Om Nidingen</a>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger active">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html" style="font-weight:600; color:var(--navy) !important;">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="besoka.html">Besöka Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Bo på Nidingen</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Bo på Nidingen</h1>
+      <p>Vakna på en av Kungsbacka skärgårds vackraste öar. Välj mellan föreningens lägenhet eller den historiska Bagarstugan.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== INTRODUKTION ===== -->
+  <section class="section" style="padding-bottom:2rem;">
+    <div class="container">
+      <div style="max-width:700px; margin:0 auto; text-align:center;">
+        <span class="eyebrow">Övernattning</span>
+        <h2>Två unika sätt att uppleva Nidingen</h2>
+        <p style="color:var(--text-mid); font-size:1.05rem;">
+          På Nidingen finns två möjligheter att stanna över natten – båda med ett historiskt
+          och unikt läge som få andra boenden kan erbjuda. Att sova på Nidingen är en upplevelse
+          som stannar kvar länge efter att man lämnat ön.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LÄGENHETEN ===== -->
+  <section class="section section--sand" id="lagenheten" style="padding-top:2rem;">
+    <div class="container">
+      <div class="grid-2" style="align-items:start; gap:3rem;">
+
+        <!-- Vänster: info + formulär -->
+        <div>
+          <div class="booking-card">
+            <div class="booking-card-header">
+              <span class="booking-badge badge-ocean">Föreningens boende</span>
+              <h2 style="margin-bottom:0.5rem;">Lägenheten</h2>
+              <p style="color:var(--text-mid); font-size:0.92rem; margin:0;">
+                Föreningen Nidingens Vänner hyr sedan några år en liten lägenhet på Nidingen
+                för sina medlemmar. Det är ett unikt tillfälle att övernatta på Kattegatts
+                vackraste ö och vakna upp med utsikt mot havet.
+              </p>
+            </div>
+            <div class="booking-card-body">
+
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                <div><strong>Kapacitet</strong>4 bäddar (1 ny säng + 3 fasta bäddar)</div>
+              </div>
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                <div><strong>Pris</strong>200 kr per bädd och natt &bull; Papperslakan 30 kr/set</div>
+              </div>
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4"/>
+                </svg>
+                <div><strong>Kök</strong>Mikrovågsugn, kylskåp med frys, kaffebryggare, vattenkokare. Köksredskap för 6 pers.</div>
+              </div>
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <div><strong>Krav</strong>Alla boende ska uppge namn och vara medlemmar i föreningen</div>
+              </div>
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <div><strong>Avbokning</strong>Senast en vecka före ankomst</div>
+              </div>
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <div><strong>Betalning</strong>Bankgiro 771-7374 eller Swish</div>
+              </div>
+
+              <hr style="border:none; border-top:1px solid var(--border); margin:1.5rem 0;">
+
+              <h3 style="margin-bottom:0.35rem; font-size:1.1rem;">Regler att känna till</h3>
+              <ul class="rules-list" style="margin-bottom:1.25rem;">
+                <li><span class="dot"></span>Samtliga boende ska vara medlemmar i Nidingens Vänner</li>
+                <li><span class="dot"></span>Avbokning senast 7 dagar innan – annars debiteras full avgift</li>
+                <li><span class="dot"></span>Lägenheten ska städas och lämnas i gott skick</li>
+                <li><span class="dot"></span>Utebliven städning eller åverkan debiteras 1 000 kr eller mer</li>
+              </ul>
+              <div style="background:var(--sand); border-radius:var(--radius); padding:1rem 1.25rem; font-size:0.83rem; color:var(--text-mid);">
+                Inte medlem ännu? <a href="foreningen.html#bli-medlem" style="font-weight:600;">Bli medlem här</a> – från 150 kr/år.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Höger: bilder -->
+        <div>
+          <div class="apt-gallery">
+            <img src="Bilder Lägenhet/var_lagenhet.jpg" alt="Lägenheten på Nidingen – exteriör" class="wide"
+                 onclick="openLightbox(this.src, this.alt)">
+            <img src="Bilder Lägenhet/lagenhet22.jpg" alt="Lägenheten – vy"
+                 onclick="openLightbox(this.src, this.alt)">
+            <img src="Bilder Lägenhet/IMG_9983_Original.jpeg" alt="Lägenheten – interiör"
+                 onclick="openLightbox(this.src, this.alt)">
+            <img src="Bilder Lägenhet/IMG_9989_Original.jpeg" alt="Lägenheten – kök"
+                 onclick="openLightbox(this.src, this.alt)">
+            <img src="Bilder Lägenhet/IMG_9990_Original.jpeg" alt="Lägenheten – sovrum" class="wide"
+                 onclick="openLightbox(this.src, this.alt)">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bokningsformulär lägenheten -->
+      <div style="max-width:700px; margin:3rem auto 0;">
+        <h3 style="margin-bottom:0.5rem; text-align:center;">Boka Lägenheten</h3>
+        <p style="text-align:center; color:var(--text-mid); font-size:0.9rem; margin-bottom:2rem;">
+          Fyll i formuläret nedan så återkommer Johan Elvborn med bekräftelse.
+          Kontakt: <a href="tel:0707998519">0707-99 85 19</a> &bull;
+          <a href="mailto:johanelborn@hotmail.com">johanelborn@hotmail.com</a>
+        </p>
+        <form action="mailto:johanelborn@hotmail.com" method="get" enctype="text/plain"
+              style="background:var(--white); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow);">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="lag-name">Namn (alla boende)</label>
+              <input type="text" id="lag-name" name="Namn" placeholder="Anna Svensson, ...">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="lag-email">E-post</label>
+              <input type="email" id="lag-email" name="E-post" placeholder="anna@exempel.se">
+            </div>
+          </div>
+          <div class="date-row" style="margin-top:1rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="lag-in">Ankomstdatum</label>
+              <input type="date" id="lag-in" name="Ankomst">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="lag-ut">Avresedatum</label>
+              <input type="date" id="lag-ut" name="Avresa">
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 2fr; gap:1rem; margin-top:1rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="lag-guests">Antal gäster (max 4)</label>
+              <select id="lag-guests" name="Antal gäster">
+                <option value="1">1 person</option>
+                <option value="2">2 personer</option>
+                <option value="3">3 personer</option>
+                <option value="4">4 personer</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="lag-member">Medlemsnummer (om känt)</label>
+              <input type="text" id="lag-member" name="Medlemsnummer" placeholder="Valfritt">
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:1rem;">
+            <label for="lag-msg">Meddelande / övriga önskemål</label>
+            <textarea id="lag-msg" name="Meddelande" rows="3" placeholder="Eventuella önskemål eller frågor..."></textarea>
+          </div>
+          <div style="background:var(--sand-light); border-radius:var(--radius); padding:0.85rem 1rem; font-size:0.82rem; color:var(--text-mid); margin-bottom:1.25rem;">
+            ℹ️ Alla boende måste vara medlemmar. Ange namn på samtliga gäster.
+            Betalning sker via Bankgiro 771-7374 eller Swish.
+          </div>
+          <button type="submit" class="btn btn-ocean" style="width:100%; justify-content:center;">
+            Skicka bokningsförfrågan
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ===== BAGARSTUGAN ===== -->
+  <section class="section" id="bagarstugan" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid-2" style="align-items:start; gap:3rem;">
+
+        <!-- Vänster: bilder -->
+        <div>
+          <div class="apt-gallery">
+            <div class="img-ph wide" style="height:300px; border-radius:var(--radius);">
+              <span>Bild: Bagarstugan – exteriör</span>
+            </div>
+            <div class="img-ph" style="height:200px; border-radius:var(--radius);">
+              <span>Bild: Bagarstugan – interiör</span>
+            </div>
+            <div class="img-ph" style="height:200px; border-radius:var(--radius);">
+              <span>Bild: Bagarstugan – detalj</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Höger: info + formulär -->
+        <div>
+          <div class="booking-card">
+            <div class="booking-card-header">
+              <span class="booking-badge badge-sand">Destination Gottskär-Nidingen</span>
+              <h2 style="margin-bottom:0.5rem;">Bagarstugan</h2>
+              <p style="color:var(--text-mid); font-size:0.92rem; margin:0;">
+                Den charmiga Bagarstugan är ett pittoreskt boende med djupa rötter i Nidingens historia.
+                Med ett unikt läge på ön erbjuder den en genuin och avskild övernattningsupplevelse
+                i anslutning till fyrmiljön.
+              </p>
+            </div>
+            <div class="booking-card-body">
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                <div><strong>Karaktär</strong>Historisk byggnad med ursprung från öns tid som aktiv fyrplats</div>
+              </div>
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div><strong>Läge</strong>På Nidingen, Kungsbacka skärgård</div>
+              </div>
+              <div class="info-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                </svg>
+                <div><strong>Bokas via</strong>Destination Gottskär-Nidingen</div>
+              </div>
+              <div style="background:var(--sand); border-radius:var(--radius); padding:1rem 1.25rem; font-size:0.83rem; color:var(--text-mid); margin-top:0.5rem;">
+                För priser och tillgänglighet, skicka en förfrågan via formuläret nedan eller kontakta Destination Gottskär-Nidingen direkt.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bokningsformulär Bagarstugan -->
+      <div style="max-width:700px; margin:3rem auto 0;">
+        <h3 style="margin-bottom:0.5rem; text-align:center;">Boka Bagarstugan</h3>
+        <p style="text-align:center; color:var(--text-mid); font-size:0.9rem; margin-bottom:2rem;">
+          Formuläret går till <strong>Destination Gottskär-Nidingen</strong> som hanterar bokning av Bagarstugan.
+        </p>
+        <form action="mailto:info@destinationgottskarnidingen.se" method="get" enctype="text/plain"
+              style="background:var(--white); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow);">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="bag-name">Namn</label>
+              <input type="text" id="bag-name" name="Namn" placeholder="Anna Svensson">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="bag-email">E-post</label>
+              <input type="email" id="bag-email" name="E-post" placeholder="anna@exempel.se">
+            </div>
+          </div>
+          <div class="date-row" style="margin-top:1rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="bag-in">Ankomstdatum</label>
+              <input type="date" id="bag-in" name="Ankomst">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="bag-ut">Avresedatum</label>
+              <input type="date" id="bag-ut" name="Avresa">
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 2fr; gap:1rem; margin-top:1rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="bag-guests">Antal gäster</label>
+              <select id="bag-guests" name="Antal gäster">
+                <option>1 person</option>
+                <option>2 personer</option>
+                <option>3 personer</option>
+                <option>4 personer</option>
+                <option>5+ personer</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="bag-phone">Telefon</label>
+              <input type="tel" id="bag-phone" name="Telefon" placeholder="070 000 00 00">
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:1rem;">
+            <label for="bag-msg">Meddelande / frågor</label>
+            <textarea id="bag-msg" name="Meddelande" rows="3" placeholder="Beskriv gärna ert sällskap och eventuella önskemål..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+            Skicka bokningsförfrågan
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Historik</a></li>
+            <li><a href="om-nidingen.html#fyren">Dubbelfyrarna</a></li>
+            <li><a href="om-nidingen.html#faglar">Fågelstationen</a></li>
+            <li><a href="om-nidingen.html#natur">Natur &amp; geografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#butik">Butik</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Stäng">&times;</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+  </div>
+  <script>
+    function openLightbox(src, alt) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt || '';
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>
