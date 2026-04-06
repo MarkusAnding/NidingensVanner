@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora – Om Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html">Fyrverksamhet</a>
+            <a href="flora.html" style="font-weight:600; color:var(--navy) !important;">Flora</a>
+            <a href="fauna.html">Fauna</a>
+            <a href="antikvariska.html">Antikvariska dokument</a>
+            <a href="litteratur.html">Litteratur</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="om-nidingen.html">Om Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Flora</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Flora</h1>
+      <p>Trots det utsatta kustläget har Nidingen en rik och karaktärsfull växtlighet formad av salt, vind och hav.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">Kustens växtlighet</span>
+          <h2>En unik biotop</h2>
+          <p>
+            Nidingens flora är präglad av det extremt utsatta kustläget. Salt, vind och periodvis
+            dränkta marker skapar förutsättningar för en specialiserad växtlighet som är anpassad
+            till havets krafter.
+          </p>
+          <p>
+            Vegetationen är låg och tålig. Vinden formar träd och buskar till karaktäristiska
+            Former, och de öppna strandheden och strandängsmarkerna ger ön en storslagen känsla
+            av frihet och vidd.
+          </p>
+          <p>
+            Bland de mer karakteristiska arterna på ön märks typiska kustnära växter som
+            <strong>strandråg</strong> (<em>Leymus arenarius</em>) och <strong>strandkål</strong>
+            (<em>Crambe maritima</em>), tillsammans med en mångfald örter och gräs som trivs
+            i det saltpåverkade kustlandskapet.
+          </p>
+        </div>
+        <div class="img-ph" style="height:380px;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M12 22V12M12 12C12 7 6 4 3 6c3 1 6 3 9 6M12 12c0-5 6-8 9-6-3 1-6 3-9 6"/>
+          </svg>
+          <span>Bild: Strandvegetation på Nidingen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UTVALDA ARTER ===== -->
+  <section class="section section--sand" id="arter">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Växtarter</span>
+        <h2>Karakteristisk kustnära flora</h2>
+        <p>Öns vegetation är en spegel av det extremt utsatta kustläget i Kungsbacka skärgård.</p>
+      </div>
+      <div class="grid-3">
+        <div style="padding: 0 0.5rem;">
+          <div class="img-ph" style="height:180px; margin-bottom:1rem; border-radius:var(--radius);">
+            <span>Bild: Strandråg</span>
+          </div>
+          <h3>Strandråg</h3>
+          <p style="color:var(--text-mid); font-size:0.9rem;">
+            <em>Leymus arenarius</em> – En av öns mest karaktäristiska växter. Strandrågen
+            binder sanden och bildar höga gräsridåer som är typiska för öppna kustmiljöer.
+          </p>
+        </div>
+        <div style="padding: 0 0.5rem;">
+          <div class="img-ph" style="height:180px; margin-bottom:1rem; border-radius:var(--radius);">
+            <span>Bild: Strandkål</span>
+          </div>
+          <h3>Strandkål</h3>
+          <p style="color:var(--text-mid); font-size:0.9rem;">
+            <em>Crambe maritima</em> – En kraftig ört med blågrå, köttiga blad. Trivs i
+            saltpåverkad mark direkt vid strandlinjen och är tydligt anpassad till havets bräskor.
+          </p>
+        </div>
+        <div style="padding: 0 0.5rem;">
+          <div class="img-ph" style="height:180px; margin-bottom:1rem; border-radius:var(--radius);">
+            <span>Bild: Strandängsvegetation</span>
+          </div>
+          <h3>Strandängsflora</h3>
+          <p style="color:var(--text-mid); font-size:0.9rem;">
+            De låga strandängarna på ön hyser en mångfald av saltälskande örter och gräs,
+            anpassade till en miljö där havsvattnet periodvis svämmar över markytan.
+          </p>
+        </div>
+        <div style="padding: 0 0.5rem;">
+          <div class="img-ph" style="height:180px; margin-bottom:1rem; border-radius:var(--radius);">
+            <span>Bild: Klippvegetation</span>
+          </div>
+          <h3>Klippvegetation</h3>
+          <p style="color:var(--text-mid); font-size:0.9rem;">
+            På de exponerade klipporna trivs mossor, lavar och tåliga örter som klarar
+            av att växa i ytterst tunna jordsikt med högt saltinnehåll och stark vindexponering.
+          </p>
+        </div>
+        <div style="padding: 0 0.5rem;">
+          <div class="img-ph" style="height:180px; margin-bottom:1rem; border-radius:var(--radius);">
+            <span>Bild: Havtorn</span>
+          </div>
+          <h3>Havtorn</h3>
+          <p style="color:var(--text-mid); font-size:0.9rem;">
+            <em>Hippophae rhamnoides</em> – Förekommer i de mer vindskyddade delarna av ön.
+            Bären är karakteristiskt orangegula och en viktig matresurs för många fågelarter.
+          </p>
+        </div>
+        <div style="padding: 0 0.5rem;">
+          <div class="img-ph" style="height:180px; margin-bottom:1rem; border-radius:var(--radius);">
+            <span>Bild: Allmän flora</span>
+          </div>
+          <h3>Mer att dokumentera</h3>
+          <p style="color:var(--text-mid); font-size:0.9rem;">
+            Arbetet med att dokumentera och fotografera Nidingens flora pågår.
+            Föreningen välkomnar bidrag och observationer från besökare med botaniskt intresse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center; max-width:700px">
+      <span class="eyebrow">Utforska mer</span>
+      <h2>Läs mer om Nidingens natur</h2>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+        <a href="fauna.html" class="btn btn-primary">Fauna &amp; Fågelstation</a>
+        <a href="besoka.html" class="btn btn-outline-white">Planera ditt besök</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

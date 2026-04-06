@@ -24,7 +24,17 @@
       </button>
       <nav class="nav-menu" role="navigation">
         <a href="index.html">Start</a>
-        <a href="om-nidingen.html" class="active">Om Nidingen</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html">Fyrverksamhet</a>
+            <a href="flora.html">Flora</a>
+            <a href="fauna.html">Fauna</a>
+            <a href="antikvariska.html">Antikvariska dokument</a>
+            <a href="litteratur.html">Litteratur</a>
+          </div>
+        </div>
         <div class="nav-dropdown">
           <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
           <div class="nav-dropdown-menu">
@@ -66,20 +76,22 @@
       <div class="grid-2">
         <div>
           <span class="eyebrow">Geografisk översikt</span>
-          <h2>En liten ö med stor historia</h2>
+          <h2>En spännande ö med dåligt rykte</h2>
           <p>
-            Nidingen är en liten ö i Kungsbacka skärgård, belägen utanför den halländska kusten söder om Göteborg.
-            Ön är omgiven av grunda vatten och farliga skär, vilket historiskt gjort den till en viktig plats
-            för sjöfartsnavigering längs den svenska västkusten.
+            Nidingen får sitt namn från ordet <em>nyding</em> eller <em>nying</em>, vilket troligen
+            betyder stockeld – "klippa där man tänt eller brukat tända eld". Ön är belägen i
+            Kungsbacka skärgård utanför den halländska kusten och ligger strategiskt mitt i
+            farleden längs kusten.
           </p>
           <p>
-            Öns yta är begränsad, men dess kulturhistoriska och naturvetenskapliga värden är enorma.
-            Här finns dubbelfyrarna, fågelstationen, historiska byggnader och en natur som präglas
-            av kustens öppna landskap med vind, hav och himmel.
+            De omgivande reven har orsakat uppskattningsvis 700 skeppsbrott genom historien.
+            Behovet av ett fyrmärke på platsen var uppenbart, och 1624 tändes den första elden –
+            en tradition av kontinuerlig drift som sedan dess aldrig brutits.
           </p>
           <p>
-            Nidingen tillhör Kungsbacka kommun och förvaltas av Statens Fastighetsverk i samarbete
-            med föreningen Nidingens Vänner.
+            Nidingen huserar dessutom <strong>världens första dubbelfyrar</strong> – ett unikt system
+            med två torn som ger sjöfarare en exakt ledlinje förbi de farliga grunden.
+            Idag förvaltas ön av Statens Fastighetsverk i samarbete med Föreningen Nidingens Vänner.
           </p>
         </div>
         <div class="img-ph" style="height:380px;">
@@ -90,6 +102,50 @@
           </svg>
           <span>Karta: Nidingens läge i Kungsbacka skärgård</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SNABBLÄNKAR TILL UNDERSIDOR ===== -->
+  <section style="background:var(--sand-light); padding:3rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="grid-3">
+        <a href="fyrverksamhet.html" class="feature-card">
+          <div class="feature-icon">🏮</div>
+          <h3>Fyrverksamhet</h3>
+          <p>400 år av kontinuerlig drift – från kolkorgar till automatiserade fyrar. Läs om dubbelfyrssystemets historia.</p>
+          <span class="more-link">Läs mer</span>
+        </a>
+        <a href="fauna.html" class="feature-card">
+          <div class="feature-icon">🐦</div>
+          <h3>Fauna</h3>
+          <p>250+ fågelarter, 250 000 ringmärkta fåglar och Sveriges enda koloni av tretåig mås. En ornitologisk skatt.</p>
+          <span class="more-link">Läs mer</span>
+        </a>
+        <a href="flora.html" class="feature-card">
+          <div class="feature-icon">🌿</div>
+          <h3>Flora</h3>
+          <p>Strandråg, strandkål och en mångfald kustnära växter formade av salt, vind och hav.</p>
+          <span class="more-link">Läs mer</span>
+        </a>
+        <a href="antikvariska.html" class="feature-card">
+          <div class="feature-icon">📜</div>
+          <h3>Antikvariska dokument</h3>
+          <p>Historiska handlingar, ritningar och restaureringsprotokoll om Nidingens byggnader och kulturarv.</p>
+          <span class="more-link">Utforska arkivet</span>
+        </a>
+        <a href="litteratur.html" class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Litteratur</h3>
+          <p>Böcker och skrifter om Nidingen – från fyrvaktarnas liv till den botaniska floran och sjöfartens historia.</p>
+          <span class="more-link">Se boklistan</span>
+        </a>
+        <a href="besoka.html" class="feature-card">
+          <div class="feature-icon">⛵</div>
+          <h3>Besöka Nidingen</h3>
+          <p>Praktisk information om hur du tar dig till ön, vad som gäller för besök och hur du kan bo på ön.</p>
+          <span class="more-link">Planera besök</span>
+        </a>
       </div>
     </div>
   </section>
@@ -333,10 +389,12 @@
         <div class="footer-col">
           <h4>Om Nidingen</h4>
           <ul>
-            <li><a href="om-nidingen.html">Historik</a></li>
-            <li><a href="om-nidingen.html#fyren">Dubbelfyrarna</a></li>
-            <li><a href="om-nidingen.html#faglar">Fågelstationen</a></li>
-            <li><a href="om-nidingen.html#natur">Natur &amp; geografi</a></li>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
           </ul>
         </div>
         <div class="footer-col">

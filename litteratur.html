@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Litteratur – Om Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .book-list {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .book-item {
+      display: flex;
+      gap: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .book-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .book-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 64px;
+      background: linear-gradient(140deg, var(--navy) 0%, var(--ocean) 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.4rem;
+    }
+    .book-info h3 {
+      margin: 0 0 0.3rem;
+      font-size: 1.05rem;
+      color: var(--navy);
+    }
+    .book-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      margin-top: 0.4rem;
+    }
+    .book-meta span::before {
+      content: '·';
+      margin-right: 0.5rem;
+      color: var(--border);
+    }
+    .book-meta span:first-child::before { display: none; }
+    .book-link {
+      font-size: 0.82rem;
+      color: var(--ocean);
+      text-decoration: none;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+    .book-link:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .book-item { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html">Fyrverksamhet</a>
+            <a href="flora.html">Flora</a>
+            <a href="fauna.html">Fauna</a>
+            <a href="antikvariska.html">Antikvariska dokument</a>
+            <a href="litteratur.html" style="font-weight:600; color:var(--navy) !important;">Litteratur</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medal" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="om-nidingen.html">Om Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Litteratur</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Litteratur om Nidingen</h1>
+      <p>Böcker och skrifter som berättar om ön, fyrarna, naturen och livet på Nidingen.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== BOKLISTA ===== -->
+  <section class="section">
+    <div class="container" style="max-width:860px; margin:0 auto;">
+      <div class="section-header" style="text-align:left; margin-bottom:2.5rem;">
+        <span class="eyebrow">Läsvärt</span>
+        <h2>Böcker om Nidingen</h2>
+        <p>Ett urval av litteratur om Nidingen, Hallandskusten och fyrarna – för den som vill fördjupa sig.</p>
+      </div>
+
+      <div class="book-list">
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Livet på Nidingen</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              Utgiven av Föreningen Nidingens Vänner. En personlig och levande skildring av livet på ön,
+              med berättelser om fyrvaktarfamiljer, vardag och det utsatta kustklimatet.
+            </p>
+            <div class="book-meta">
+              <span>Mia Danelius &amp; Christer Lundgren</span>
+              <span>1997, omarbetad 2010</span>
+              <span>ISBN: 992751588X</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Nidingen – Sveriges första fyrplats</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              En historisk genomgång av Nidingens roll som landets äldsta fyrplats, med fokus på
+              fyrverksamhetens historia och dess betydelse för sjöfarten.
+            </p>
+            <div class="book-meta">
+              <span>Hilmer Carlsson</span>
+              <span>1946</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Sjörapporten</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              Skildrar sjöfartens historia och livet längs den svenska kusten, med inslag om de
+              historiska fyrplatserna.
+            </p>
+            <div class="book-meta">
+              <span>Anders Nylund</span>
+              <span>2012</span>
+              <span>ISBN: 978-91-1-303428-7</span>
+            </div>
+            <a href="http://www.andersnylund.se/sjorapporten" target="_blank" rel="noopener" class="book-link">www.andersnylund.se/sjorapporten ↗</a>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Halland – landet innanför hallarna</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              En heltäckande bok om Hallands natur, historia och landskap, med kapitel om
+              kustens karaktär och de historiska platserna längs havet.
+            </p>
+            <div class="book-meta">
+              <span>Patrik Leonardsson</span>
+              <span>2002, omarbetad 2011</span>
+              <span>ISBN: 91-87160-20-X</span>
+            </div>
+            <a href="http://www.leonardsson.se" target="_blank" rel="noopener" class="book-link">www.leonardsson.se ↗</a>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Halländska öar</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              Porträtterar de halländska kustöarna med deras historia, natur och karaktär.
+              Nidingen ges ett eget kapitel med fokus på fyrarnas historia och naturvärden.
+            </p>
+            <div class="book-meta">
+              <span>Patrik Leonardsson</span>
+              <span>2005, omarbetad 2011</span>
+              <span>ISBN: 91-8716021-8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Ljus längs kusten</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              En samlad historia om de svenska fyrarna längs Väst- och Sydkusten, med historiska
+              bilder och berättelser om fyrvaktarnas liv.
+            </p>
+            <div class="book-meta">
+              <span>Anders Hedin</span>
+              <span>1988</span>
+              <span>ISBN: 91-1-873432-4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Kungsbacka – En bok om naturen</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              Dokumenterar naturvärden i Kungsbacka kommun, inklusive kustens fågelliv,
+              botanik och de skyddsvärda naturmiljöerna i skärgården.
+            </p>
+            <div class="book-meta">
+              <span>Annette Seldén</span>
+              <span>2012</span>
+              <span>ISBN: 978-916-3710-759</span>
+            </div>
+            <a href="http://www.seldenphoto.se" target="_blank" rel="noopener" class="book-link">www.seldenphoto.se ↗</a>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <div class="book-icon">📖</div>
+          <div class="book-info">
+            <h3>Beskrifning öfver svenska fyrarne</h3>
+            <p style="font-size:0.9rem; color:var(--text-mid); margin:0.3rem 0 0;">
+              Historiskt dokument från Kongliga Lotsstyrelsen som ger en detaljerad beskrivning
+              av samtliga svenska fyrar i slutet av 1800-talet. Finns som faksimil.
+              Tillgänglig hos Onsala Båt och Sjöfartsmuseum.
+            </p>
+            <div class="book-meta">
+              <span>Kongliga Lotsstyrelsen</span>
+              <span>1872 (faksimil 1985)</span>
+              <span>ISBN: 91-7810-334-7</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center; max-width:700px">
+      <span class="eyebrow">Utforska mer</span>
+      <h2>Fördjupa dig i Nidingens historia</h2>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+        <a href="fyrverksamhet.html" class="btn btn-primary">Fyrverksamheten</a>
+        <a href="antikvariska.html" class="btn btn-outline-white">Antikvariska dokument</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

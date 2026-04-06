@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antikvariska dokument – Om Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html">Fyrverksamhet</a>
+            <a href="flora.html">Flora</a>
+            <a href="fauna.html">Fauna</a>
+            <a href="antikvariska.html" style="font-weight:600; color:var(--navy) !important;">Antikvariska dokument</a>
+            <a href="litteratur.html">Litteratur</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="om-nidingen.html">Om Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Antikvariska dokument</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Antikvariska dokument</h1>
+      <p>Arkiv med historiska och antikvariska dokument om Nidingens byggnader, fyrverksamhet och kulturarv.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section">
+    <div class="container" style="max-width:800px; margin:0 auto;">
+      <span class="eyebrow">Dokumentation</span>
+      <h2>Bevarad historia i dokument</h2>
+      <p>
+        Föreningen Nidingens Vänner arbetar kontinuerligt med att samla in, digitalisera och
+        tillgängliggöra historiska dokument som rör Nidingens fyrplats, byggnader och kulturarv.
+        Dokumenten utgör ett viktigt underlag för det pågående restaureringsarbetet och för
+        forskning om Nidingens historia.
+      </p>
+      <p>
+        Arkivet innehåller bland annat ritningar, undersökningsrapporter, restaureringsprotokoll
+        och historiska beskrivningar av de skyddsvärda byggnaderna på ön. Arbetet med att
+        komplettera och digitalisera arkivet pågår löpande.
+      </p>
+
+      <div style="background:var(--sand); border-left:4px solid var(--gold); border-radius:var(--radius); padding:1.5rem 2rem; margin:2.5rem 0;">
+        <h3 style="margin-top:0; font-size:1.1rem;">Arkiv under uppbyggnad</h3>
+        <p style="margin-bottom:0; color:var(--text-mid);">
+          Det digitala arkivet med intressanta dokument om Nidingen är under uppbyggnad.
+          Kontakta föreningen om du har dokument, fotografier eller material som kan
+          bidra till att berika arkivet.
+        </p>
+      </div>
+
+      <h3>Typer av dokument</h3>
+      <div class="grid-2" style="gap:1.5rem; margin-top:1rem;">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Byggnadsarv</span>
+            <h3>Byggnadshistoriska utredningar</h3>
+            <p>Dokumentation av de historiska byggnaderna på Nidingen, deras konstruktion, material och historiska förändringar.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Fyrhistoria</span>
+            <h3>Fyrplatsdokumentation</h3>
+            <p>Historiska handlingar om fyrverksamheten – driftsprotokoll, kartor, ritningar och rapporter från fyrstyrelsens arkiv.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Restaurering</span>
+            <h3>Restaureringsrapporter</h3>
+            <p>Dokumentation av genomförda restaureringsarbeten i enlighet med Riksantikvarieämbetets krav och antikvarisk standard.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Historiska foton</span>
+            <h3>Fotografier och kartor</h3>
+            <p>Historiska foton av ön, fyrvaktarna och byggnaderna, samt historiska sjökort och kartor som visar Nidingens omgivningar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; padding:2rem; background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); text-align:center;">
+        <h3 style="margin-top:0;">Bidra till arkivet</h3>
+        <p style="color:var(--text-mid);">
+          Har du gamla fotografier, dokument eller handlingar som rör Nidingen?
+          Föreningen tar gärna emot kopior eller digitala filer för arkivet.
+        </p>
+        <a href="mailto:info@nidingensvanner.se" class="btn btn-primary">Kontakta oss</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

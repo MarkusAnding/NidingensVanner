@@ -370,6 +370,7 @@ p:last-child { margin-bottom: 0; }
   right: 0;
   line-height: 0;
   pointer-events: none;
+  z-index: 1;
 }
 .hero-wave svg { display: block; width: 100%; }
 
@@ -405,6 +406,48 @@ p:last-child { margin-bottom: 0; }
   line-height: 0;
 }
 .page-hero-wave svg { display: block; width: 100%; }
+
+/* Variant utan inbyggd vågkant (vågkanten sitter på nästa element) */
+.page-hero--no-wave {
+  padding-bottom: 3rem;
+}
+
+/* ===== VIDEOBAND (besöka-sidan) ===== */
+.page-video {
+  position: relative;
+  height: clamp(260px, 42vw, 520px);
+  overflow: hidden;
+  background: #0a1e2e;   /* fallback */
+}
+.page-video__film {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* Svag vinjett för djup */
+.page-video::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(10,30,46,0.20) 0%,
+    rgba(10,30,46,0.10) 60%,
+    rgba(10,30,46,0.35) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.page-video__wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  z-index: 2;
+}
+.page-video__wave svg { display: block; width: 100%; }
 
 /* ===== KNAPPAR ===== */
 .btn {

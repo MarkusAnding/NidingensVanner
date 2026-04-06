@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fyrverksamhet – Om Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html" style="font-weight:600; color:var(--navy) !important;">Fyrverksamhet</a>
+            <a href="flora.html">Flora</a>
+            <a href="fauna.html">Fauna</a>
+            <a href="antikvariska.html">Antikvariska dokument</a>
+            <a href="litteratur.html">Litteratur</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="om-nidingen.html">Om Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Fyrverksamhet</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Fyrverksamhet</h1>
+      <p>Från brinnande kolkorgar till automatiserade fyrar – 400 år av ljus och sjösäkerhet på Nidingen.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">Ursprung och namn</span>
+          <h2>En spännande ö med dåligt rykte</h2>
+          <p>
+            Nidingen får sitt namn från ordet <em>nyding</em> eller <em>nying</em>, vilket betyder stockeld –
+            troligen en hänvisning till "klippa där man tänt eller brukat tända eld". Ön ligger
+            strategiskt mitt i farleden längs kusten, omgiven av grunda vatten och farliga rev.
+          </p>
+          <p>
+            De omgivande reven har orsakat uppskattningsvis 700 skeppsbrott genom historien,
+            eftersom segelfartyg från förr navigerade nära kusten för att kunna ankra under natten.
+            Behovet av ett sjömärke här var uppenbart och akut.
+          </p>
+          <p>
+            Nidingen har hedern att ha haft <strong>världens första dubbelfyrar</strong> – två torn
+            byggdes för att skilja den här fyrplatsen från liknande på Anholt och Skagen, och
+            för att ge sjöfarare en säker ledlinje.
+          </p>
+        </div>
+        <div class="img-ph" style="height:380px;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21,15 16,10 5,21"/>
+          </svg>
+          <span>Bild: Dubbelfyrarna på Nidingen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIDSLINJE ===== -->
+  <section class="section section--sand" id="historia">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Historik</span>
+        <h2>Fyrarnas utveckling genom tiderna</h2>
+        <p>Från öppen eld till modern teknik – en resa genom fyra sekler av kontinuerlig drift.</p>
+      </div>
+      <div class="grid-2" style="gap:4rem; align-items:start;">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1624</div>
+            <h4>Fyrplatsen etableras</h4>
+            <p>
+              De första vippfyrarna tänds på Nidingen. Man hissade upp korgar med brinnande kol
+              i en vippa – ett system som krävde ständig bevakning och kontinuerlig tillförsel av bränsle.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1645</div>
+            <h4>Sverige tar över</h4>
+            <p>
+              Efter att Sverige tar kontroll övergick man till fasta fyrpannor på slagghögarna.
+              Detta sparade pengar då endast en man behövdes för drift istället för två,
+              och ledde även till bättre kontroll av det viktiga ljuset.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1766</div>
+            <h4>Expansion av personal och säkerhet</h4>
+            <p>
+              Personalen utökas från en man till åtta. Samma år installerades en stor metallklocka
+              för att varna fartyg vid dimmigt väder – ett viktigt komplement till fyrarnas ljus.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1832–1834</div>
+            <h4>De två stenfyrarna byggs</h4>
+            <p>
+              Två massiva stenfyrar uppförs, ersättande de äldre träkonstruktionerna.
+              Dessa är de torn som än idag står som statliga byggnadsminnen på ön och
+              som föreningen arbetar för att bevara.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1846</div>
+            <h4>Fyrarna höjs</h4>
+            <p>
+              De båda stenfyrarna höjs till dubbel höjd för att öka ljusets räckvidd och synlighet
+              längs den halländska kusten.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1875</div>
+            <h4>Kanoner för nödsignal</h4>
+            <p>
+              Tre kanoner ställs upp på ön för att avge varningsskott i dålig sikt.
+              Säkerhetsarrangemangen kring fyrplatsen utökas kontinuerligt.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1946</div>
+            <h4>Modern tid och automatisering</h4>
+            <p>
+              De gamla stenfyrarna kompletteras med en ny betongfyr som fortfarande är i drift.
+              Ångsirenerna ersätts av en elektrisk tyfon. Successivt automatiseras driften och
+              fyrvaktarnas permanenta bosättning på ön upphör.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2000-tal</div>
+            <h4>Nidingens Vänner och bevarandet</h4>
+            <p>
+              Föreningen Nidingens Vänner bildas med uppdrag att bevara de historiska stenfyrarna
+              och övriga byggnader på ön. Restaureringsarbetet sker i samarbete med Statens
+              Fastighetsverk och enligt antikvarisk standard.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="img-ph" style="height:280px; margin-bottom:1.5rem;">
+            <span>Historiskt foto: Fyrarna och fyrvaktarbostaden</span>
+          </div>
+          <div class="fact-box" style="margin-bottom:1.5rem;">
+            <h4>Dubbelfyrssystemet</h4>
+            <p style="font-size:0.9rem; margin-bottom:0;">
+              Systemet fungerar genom att sjöfararen håller de båda fyrarna i linje.
+              Den <strong>östra fyren</strong> är lägre och placerad längre österut, medan
+              den <strong>västra fyren</strong> är högre mot havssidan. Når de en gemensam
+              linje är farleden fri.
+            </p>
+          </div>
+          <div class="fact-box">
+            <h4>Personal på ön</h4>
+            <p style="font-size:0.9rem; margin-bottom:0;">
+              Under 1800-talets slut bestod personalen av en fyrmaster, två fyrväktare och ett
+              biträde – totalt fyra personer, med sina familjer bosatta i de byggnader som
+              ännu finns kvar på ön.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PÅGÅENDE ARBETE ===== -->
+  <section class="section" id="renovering">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Idag</span>
+        <h2>Pågående restaureringsarbete</h2>
+        <p>Föreningens frivilliga arbetar löpande med att bevara de historiska byggnaderna på ön.</p>
+      </div>
+      <div class="grid-2">
+        <div>
+          <p>
+            Idag genomförs löpande restaureringsarbeten av föreningens frivilliga, med stöd av
+            Statens Fastighetsverk. Renoveringarna sker enligt antikvarisk standard för att
+            bevara det historiska uttrycket och byggnadssubstansen.
+          </p>
+          <p>
+            Arbetet med de gamla stenfyrarna är ett långsiktigt åtagande. Allt från tak och
+            murverk till dörrar och fönster behöver kontinuerlig skötsel i det utsatta
+            kustklimatet.
+          </p>
+          <p>
+            Vill du engagera dig i bevarandearbetet som frivillig, eller stödja det ekonomiskt
+            som medlem? Läs mer om föreningen eller kontakta oss.
+          </p>
+          <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
+            <a href="foreningen.html#bli-medlem" class="btn btn-primary">Bli Medlem</a>
+            <a href="foreningen.html#kontakt" class="btn btn-outline-navy">Kontakta oss</a>
+          </div>
+        </div>
+        <div class="img-ph" style="height:320px;">
+          <span>Bild: Renoveringsarbete på västra fyren</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RELATERADE SIDOR ===== -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center; max-width:700px">
+      <span class="eyebrow">Utforska mer</span>
+      <h2>Mer om Nidingen</h2>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+        <a href="fauna.html" class="btn btn-outline-white">Fauna &amp; Fågelstation</a>
+        <a href="flora.html" class="btn btn-outline-white">Flora</a>
+        <a href="litteratur.html" class="btn btn-outline-white">Litteratur om Nidingen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

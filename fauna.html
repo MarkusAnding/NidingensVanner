@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fauna – Om Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <span class="logo-name">Föreningen Nidingens Vänner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html">Fyrverksamhet</a>
+            <a href="flora.html">Flora</a>
+            <a href="fauna.html" style="font-weight:600; color:var(--navy) !important;">Fauna</a>
+            <a href="antikvariska.html">Antikvariska dokument</a>
+            <a href="litteratur.html">Litteratur</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="om-nidingen.html">Om Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Fauna</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Fauna</h1>
+      <p>Nidingen är ett av Sveriges viktigaste fågelområden – en unik mötesplats för hundratals arter under vår- och höststräcket.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== FÅGELSTATIONEN ===== -->
+  <section class="section" id="fagelstation">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">Nidingens Fågelstation</span>
+          <h2>En av Sveriges mest välkända fågelstationer</h2>
+          <p>
+            Nidingens Fågelstation drivs av Göteborgs Ornitologiska Förening och bedriver
+            systematisk ringmärkning av fåglar sedan 1980. Sedan starten har mer än
+            <strong>250 000 fåglar</strong> ringmärkts på ön, vilket ger värdefull data om
+            fågelarters rörelsemönster och migration längs den svenska västkusten.
+          </p>
+          <p>
+            Ön ligger strategiskt på en viktig sträckled. Under vår och höst passerar enorma
+            mängder fåglar – under de bästa dagarna kan tiotusentals individer observeras
+            på en enda dag. Mer än <strong>250 fågelarter</strong> har totalt registrerats
+            på och kring Nidingen.
+          </p>
+          <p>
+            Säsongsbegränsningar gäller: ön är fridlyst 1 april–15 juli för att skydda häckande fåglar.
+            Utanför denna period är ön öppen för besök och fågelskådning.
+          </p>
+          <div style="margin-top:1.5rem;">
+            <a href="https://www.gof.se" target="_blank" rel="noopener" class="partner-pill">Göteborgs Ornitologiska Förening →</a>
+          </div>
+        </div>
+        <div class="img-ph" style="height:380px;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M12 2C6 2 2 8 2 12s4 10 10 10 10-4 10-10S18 2 12 2"/>
+          </svg>
+          <span>Bild: Ringmärkning av fåglar vid stationen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRETÅIG MÅS ===== -->
+  <section class="section section--sand" id="tretåig-mas">
+    <div class="container">
+      <div class="grid-2">
+        <div class="img-ph" style="height:380px;">
+          <span>Bild: Tretåig mås (Rissa tridactyla)</span>
+        </div>
+        <div>
+          <span class="eyebrow">Unik häckning</span>
+          <h2>Tretåig mås – en historisk observation</h2>
+          <p>
+            Nidingen har en alldeles speciell plats i den svenska ornitologins historia.
+            Det var här som tretåig mås (<em>Rissa tridactyla</em>) dokumenterades häcka
+            i Sverige för <strong>första gången</strong>.
+          </p>
+          <p>
+            Fyndet gjordes av Sven Mathiasson i augusti 1967, vid ett sjömärke på Nidingen.
+            Föräldrafågeln var ringmärkt från Museum Copenhagen och hade ursprungligen
+            märkts som unge på Nordre Renner i Kattegatt år 1963.
+          </p>
+          <p>
+            Idag huserar Nidingen Sveriges enda koloni av tretåig mås, med uppskattningsvis
+            <strong>45 häckande par</strong>. Kolonin är unik i ett nationellt perspektiv och
+            lockar ornitologer från hela landet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FÅGELARTER ===== -->
+  <section class="section" id="arter">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Arter</span>
+        <h2>Utvalda fågelarter på Nidingen</h2>
+        <p>Ett urval av de mer karakteristiska och sällsynta arterna som observerats på ön.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Häckar på ön</span>
+            <h3>Tretåig mås</h3>
+            <p><em>Rissa tridactyla</em> – Sveriges enda häckningskoloni finns på Nidingen, med ca 45 par. Arten häckar på klippor och sjömärken.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Sällsynt</span>
+            <h3>Kentsk tärna</h3>
+            <p><em>Hydroprogne caspia</em> – En av de större tärnorna som regelbundet observeras vid Nidingen under sträcket.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Häckar på ön</span>
+            <h3>Tobisgrissla</h3>
+            <p><em>Cepphus grylle</em> – Häckar i klippspringor på ön. Känns igen på sin svart-vita dräkt och röda ben.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Sträckfågel</span>
+            <h3>Småskrake</h3>
+            <p><em>Mergus serrator</em> – Ses regelbundet vid Nidingen under sträck och vinterhalvåret i de omgivande vattnen.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">Sträckfågel</span>
+            <h3>Havstrut</h3>
+            <p>Stor och karakteristisk, en av de vanligaste måsarterna runt ön. Häckar i området och ses året runt.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="card-tag">250+ arter</span>
+            <h3>Och många fler…</h3>
+            <p>Totalt har över 250 fågelarter noterats på och kring Nidingen. Under toppdagar på sträcket kan tiotusentals individer passera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center; max-width:700px">
+      <span class="eyebrow">Planera ditt besök</span>
+      <h2>Kom och upplev fågellivet</h2>
+      <p style="color:rgba(255,255,255,0.75); margin-bottom:2rem;">
+        Bästa sträcktid är april–maj och september–oktober. Kom ihåg att ön är fridlyst
+        1 april–15 juli för att skydda häckande fåglar.
+      </p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="besoka.html" class="btn btn-primary">Planera ditt besök</a>
+        <a href="flora.html" class="btn btn-outline-white">Läs om floran</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+            <li><a href="besoka.html#hitta">Hitta dit</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
