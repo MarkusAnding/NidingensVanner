@@ -229,12 +229,12 @@ p:last-child { margin-bottom: 0; }
   pointer-events: none;
 }
 .slide-location {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: clamp(4rem, 13vw, 10rem);
-  font-weight: 700;
+  font-weight: 400;
   color: white;
-  letter-spacing: 0.22em;
-  text-shadow: 0 4px 32px rgba(0,0,0,0.55);
+  letter-spacing: 0.30em;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.40);
   margin: 0;
   line-height: 1;
 }
