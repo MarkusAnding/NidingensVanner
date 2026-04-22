@@ -1070,4 +1070,24 @@ p:last-child { margin-bottom: 0; }
   .container { padding: 0 1rem; }
   .grid-4 { grid-template-columns: 1fr; }
   .page-hero { padding: 3rem 1rem 3rem; }
+
+  /* Slideshow-overlay: tightare spacing på smal skärm */
+  .slide-location {
+    letter-spacing: 0.14em;
+    font-size: clamp(2.8rem, 16vw, 4.5rem);
+  }
+  .slide-coords { letter-spacing: 0.16em; font-size: 0.7rem; }
+
+  /* Videoband kortare på mobil */
+  .page-video { height: 220px; }
+
+  /* Brödsmulor radbryts snyggt */
+  .breadcrumb-inner { flex-wrap: wrap; }
+
+  /* Lite mer luft i bookingkort-body */
+  .booking-card-header,
+  .booking-card-body { padding: 1.25rem; }
+
+  /* Litteratur-lista – enklare layout */
+  .book-item { padding: 1.25rem; }
 }

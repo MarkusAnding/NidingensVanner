@@ -69,6 +69,23 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
     }
 
+    /* Tvåkolumns-rad i formulär (namn + e-post) */
+    .form-cols-2 {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    /* Tvåkolumns-rad: smal + bred (gäster + fält) */
+    .form-cols-wide {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .apt-gallery { grid-template-columns: 1fr; }
+      .apt-gallery img.wide { grid-column: span 1; height: 220px; }
+      .date-row { grid-template-columns: 1fr; }
+      .form-cols-2 { grid-template-columns: 1fr; }
+      .form-cols-wide { grid-template-columns: 1fr; }
+    }
+
     /* Avdelningslinje */
     .section-divider {
       border: none; border-top: 1px solid var(--border);
@@ -276,7 +293,7 @@
         </p>
         <form action="mailto:johanelborn@hotmail.com" method="get" enctype="text/plain"
               style="background:var(--white); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow);">
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="form-cols-2">
             <div class="form-group" style="margin-bottom:0;">
               <label for="lag-name">Namn (alla boende)</label>
               <input type="text" id="lag-name" name="Namn" placeholder="Anna Svensson, ...">
@@ -296,7 +313,7 @@
               <input type="date" id="lag-ut" name="Avresa">
             </div>
           </div>
-          <div style="display:grid; grid-template-columns:1fr 2fr; gap:1rem; margin-top:1rem;">
+          <div class="form-cols-wide">
             <div class="form-group" style="margin-bottom:0;">
               <label for="lag-guests">Antal gäster (max 4)</label>
               <select id="lag-guests" name="Antal gäster">
@@ -381,10 +398,10 @@
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                   <circle cx="9" cy="7" r="4"/>
                 </svg>
-                <div><strong>Bokas via</strong>Destination Gottskär-Nidingen</div>
+                <div><strong>Bokas via</strong><a href="https://www.dest-gottskar-nidingen.se/" target="_blank" rel="noopener" style="color:var(--ocean);">Destination Gottskär-Nidingen ↗</a></div>
               </div>
               <div style="background:var(--sand); border-radius:var(--radius); padding:1rem 1.25rem; font-size:0.83rem; color:var(--text-mid); margin-top:0.5rem;">
-                För priser och tillgänglighet, skicka en förfrågan via formuläret nedan eller kontakta Destination Gottskär-Nidingen direkt.
+                För priser och tillgänglighet, kontakta Destination Gottskär-Nidingen direkt via länken ovan.
               </div>
             </div>
           </div>
@@ -392,59 +409,6 @@
 
       </div>
 
-      <!-- Bokningsformulär Bagarstugan -->
-      <div style="max-width:700px; margin:3rem auto 0;">
-        <h3 style="margin-bottom:0.5rem; text-align:center;">Boka Bagarstugan</h3>
-        <p style="text-align:center; color:var(--text-mid); font-size:0.9rem; margin-bottom:2rem;">
-          Formuläret går till <strong>Destination Gottskär-Nidingen</strong> som hanterar bokning av Bagarstugan.
-        </p>
-        <form action="mailto:info@destinationgottskarnidingen.se" method="get" enctype="text/plain"
-              style="background:var(--white); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow);">
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-            <div class="form-group" style="margin-bottom:0;">
-              <label for="bag-name">Namn</label>
-              <input type="text" id="bag-name" name="Namn" placeholder="Anna Svensson">
-            </div>
-            <div class="form-group" style="margin-bottom:0;">
-              <label for="bag-email">E-post</label>
-              <input type="email" id="bag-email" name="E-post" placeholder="anna@exempel.se">
-            </div>
-          </div>
-          <div class="date-row" style="margin-top:1rem;">
-            <div class="form-group" style="margin-bottom:0;">
-              <label for="bag-in">Ankomstdatum</label>
-              <input type="date" id="bag-in" name="Ankomst">
-            </div>
-            <div class="form-group" style="margin-bottom:0;">
-              <label for="bag-ut">Avresedatum</label>
-              <input type="date" id="bag-ut" name="Avresa">
-            </div>
-          </div>
-          <div style="display:grid; grid-template-columns:1fr 2fr; gap:1rem; margin-top:1rem;">
-            <div class="form-group" style="margin-bottom:0;">
-              <label for="bag-guests">Antal gäster</label>
-              <select id="bag-guests" name="Antal gäster">
-                <option>1 person</option>
-                <option>2 personer</option>
-                <option>3 personer</option>
-                <option>4 personer</option>
-                <option>5+ personer</option>
-              </select>
-            </div>
-            <div class="form-group" style="margin-bottom:0;">
-              <label for="bag-phone">Telefon</label>
-              <input type="tel" id="bag-phone" name="Telefon" placeholder="070 000 00 00">
-            </div>
-          </div>
-          <div class="form-group" style="margin-top:1rem;">
-            <label for="bag-msg">Meddelande / frågor</label>
-            <textarea id="bag-msg" name="Meddelande" rows="3" placeholder="Beskriv gärna ert sällskap och eventuella önskemål..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
-            Skicka bokningsförfrågan
-          </button>
-        </form>
-      </div>
     </div>
   </section>
 
