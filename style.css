@@ -170,6 +170,9 @@ p:last-child { margin-bottom: 0; }
 }
 .nav-cta--fb {
   background: #1877f2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
 }
 .nav-cta--fb:hover {
   background: #1560c8 !important;
