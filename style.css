@@ -983,7 +983,7 @@ p:last-child { margin-bottom: 0; }
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 2px);
   left: -0.75rem;
   background: var(--white);
   border-radius: var(--radius);
@@ -992,6 +992,14 @@ p:last-child { margin-bottom: 0; }
   min-width: 190px;
   border: 1px solid var(--border);
   z-index: 200;
+}
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
 }
 .nav-dropdown:hover .nav-dropdown-menu { display: block; }
 .nav-dropdown-menu a {
