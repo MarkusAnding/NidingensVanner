@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historiska byggnader – Besöka Nidingen – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <div class="logo-name"><span class="logo-name-top">Föreningen</span><span class="logo-name-bot">Nidingens Vänner</span></div>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html">Fyrverksamhet</a>
+            <a href="fauna.html">Fauna</a>
+            <a href="antikvariska.html">Antikvariska dokument</a>
+            <a href="litteratur.html">Litteratur</a>
+            <a href="er-ol.html">European Route of Lighthouses</a>
+            <a href="byggnader.html" style="font-weight:600; color:var(--navy) !important;">Historiska byggnader</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="med-egen-bat.html">Med egen båt</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="nav-cta nav-cta--fb" aria-label="Följ oss på Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="om-nidingen.html">Om Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Historiska byggnader</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Historiska byggnader</h1>
+      <p>Nidingens byggnader berättar om livet på ön under fyra sekler – från fyrvaktarnas vardag till sjöfartens historia.</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+      <span class="eyebrow">Kulturarv</span>
+      <h2>Byggnader som vittnar om en svunnen tid</h2>
+      <p>
+        På Nidingen finns ett unikt samlat bestånd av byggnader som spänner från 1832 till tidigt 1900-tal.
+        Husen användes av fyrmästare, fyrvaktare och deras familjer som levde och arbetade på ön i generationer.
+        Föreningen Nidingens Vänner arbetar tillsammans med Statens Fastighetsverk för att bevara dessa
+        byggnader enligt antikvarisk standard.
+      </p>
+      <p>
+        Flera av byggnaderna är statliga byggnadsminnen och vittnar om den tid då ett helt litet samhälle
+        var verksamt ute i havet – med bostäder, förråd, båthus och djurhållning.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== BOSTADSHUS ===== -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Bostäder</span>
+        <h2>Fyrmästarhus och bostadshus</h2>
+      </div>
+      <div class="grid-3">
+
+        <div class="card">
+          <img src="Bilder/byggnader/Bostadshus_1832.jpg"
+               alt="Bostadshus byggt 1832"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">1832</span>
+            <h3>Bostadshus</h3>
+            <p>Uppfört 1832, ett av öns äldsta bevarade bostadshus. Tjänade som bostad för fyrvaktare och deras familjer under 1800-talets mitt.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Bilder/byggnader/fyrmastarhuset_1852.jpg"
+               alt="Fyrmästarhus byggt 1852"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">1852</span>
+            <h3>Fyrmästarhus</h3>
+            <p>Byggt 1852 som bostad för fyrmästaren – den ansvarige för drift och underhåll av fyrarna. Ett välbevarat exempel på periodens byggnadskonst.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Bilder/byggnader/Fyrmatarhuset_1932.jpg"
+               alt="Fyrmästarhus byggt 1930"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">1930</span>
+            <h3>Fyrmästarhus</h3>
+            <p>Det yngre fyrmästarhuset från 1930 speglar en modernare period i fyrplatsens historia, då automatisering successivt förändrade arbetet på ön.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DRIFTBYGGNADER ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Drift och teknik</span>
+        <h2>Drifts­byggnader</h2>
+      </div>
+      <div class="grid-3">
+
+        <div class="card">
+          <img src="Bilder/byggnader/mistmaskinhuset.jpg"
+               alt="Mistmaskinhuset"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">1833</span>
+            <h3>Mistmaskinhuset</h3>
+            <p>Uppfört 1833 för att inhysa maskineri för mistsignalering. Dimma var ett av de farligaste hindren för segelfartyg, och mistsignalen var ett livsviktigt komplement till fyrarnas ljus.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Bilder/byggnader/bathuset.jpg"
+               alt="Båthuset på Nidingen"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">Sjöfart</span>
+            <h3>Båthuset</h3>
+            <p>Båthuset användes för förvaring av roddbåtar och annan sjöutrustning. Transporter till och från fastlandet var helt beroende av egna båtar.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Bilder/byggnader/kruthus.jpg"
+               alt="Kruthuset på Nidingen"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">Säkerhet</span>
+            <h3>Kruthuset</h3>
+            <p>Kruthuset förvarade krut till de kanoner som användes för mistsignalering. Byggnadens isolerade placering var ett medvetet säkerhetsbeslut.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICEBYGGNADER ===== -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Vardagsliv på ön</span>
+        <h2>Service­byggnader</h2>
+      </div>
+      <div class="grid-3">
+
+        <div class="card">
+          <img src="Bilder/byggnader/Tvattstugan.jpg"
+               alt="Tvättstugan på Nidingen"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">Hushåll</span>
+            <h3>Tvättstugan</h3>
+            <p>En gemensam tvättstuga för öns invånare. Byggnaden påminner om att Nidingen under lång tid var ett litet självförsörjande samhälle mitt i havet.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Bilder/byggnader/matkallare.jpg"
+               alt="Matkällaren på Nidingen"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">Livsmedel</span>
+            <h3>Matkällaren</h3>
+            <p>Användes för förvaring av matvaror. På en isolerad ö utan regelbundna leveranser var en välförsedd källare avgörande för att klara långa perioder av dåligt väder.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Bilder/byggnader/honshus.jpg"
+               alt="Hönshuset på Nidingen"
+               data-lightbox
+               style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius) var(--radius) 0 0; cursor:zoom-in;">
+          <div class="card-body">
+            <span class="card-tag">Djurhållning</span>
+            <h3>Hönshuset</h3>
+            <p>Hönshållning bidrog till öns självförsörjning. Äggen var en viktig del av kosten för de familjer som bodde permanent på Nidingen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FÅGELSTATIONEN ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">Vetenskap</span>
+          <h2>Fågelstationens hus</h2>
+          <p>
+            Fågelstationens hus används idag av Göteborgs Ornitologiska Förening (GOF) som bas för
+            den systematiska ringmärkning av fåglar som bedrivits sedan 1980. Mer än 250 000 fåglar
+            har ringmärkts sedan starten.
+          </p>
+          <p>
+            Byggnaden är ett levande bevis på att Nidingens historia inte enbart handlar om det förflutna –
+            ön är fortfarande ett aktivt centrum för vetenskaplig forskning och naturobservation.
+          </p>
+          <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
+            <a href="fauna.html" class="btn btn-outline-navy">Fauna &amp; fågelstation</a>
+            <a href="https://nidingen.gof.nu/" target="_blank" rel="noopener" class="btn btn-outline-navy">Nidingens Fågelstation ↗</a>
+          </div>
+        </div>
+        <img src="Bilder/byggnader/Fagelstationshuset.jpg"
+             alt="Fågelstationens hus på Nidingen"
+             data-lightbox
+             style="width:100%; height:380px; object-fit:cover; border-radius:var(--radius-lg); cursor:zoom-in;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center; max-width:700px">
+      <span class="eyebrow">Stöd bevarandet</span>
+      <h2>Hjälp oss bevara historien</h2>
+      <p style="color:rgba(255,255,255,0.75); margin-bottom:2rem;">
+        Föreningens frivilliga arbetar löpande med att restaurera och underhålla dessa unika byggnader
+        tillsammans med Statens Fastighetsverk.
+      </p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="foreningen.html#bli-medlem" class="btn btn-primary">Bli Medlem</a>
+        <a href="fyrverksamhet.html" class="btn btn-outline-white">Fyrverksamhet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
+            <li><a href="er-ol.html">European Route of Lighthouses</a></li>
+            <li><a href="byggnader.html">Historiska byggnader</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="med-egen-bat.html">Med egen båt</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out;" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="" style="max-width:92vw; max-height:92vh; object-fit:contain; border-radius:var(--radius-lg); box-shadow:0 8px 48px rgba(0,0,0,0.6);">
+  </div>
+  <script>
+    document.querySelectorAll('img[data-lightbox]').forEach(function(img) {
+      img.addEventListener('click', function() {
+        var lb = document.getElementById('lightbox');
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox-img').alt = img.alt;
+        lb.style.display = 'flex';
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') document.getElementById('lightbox').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
