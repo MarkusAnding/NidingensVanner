@@ -16,7 +16,7 @@
     <div class="header-inner">
       <a href="index.html" class="logo">
         <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
-        <span class="logo-name">Föreningen Nidingens Vänner</span>
+        <div class="logo-name"><span class="logo-name-top">Föreningen</span><span class="logo-name-bot">Nidingens Vänner</span></div>
       </a>
       <button class="nav-toggle" aria-label="Öppna meny"
               onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
@@ -172,7 +172,7 @@
             <span style="font-size:0.85rem; color:var(--muted); font-family:monospace;">57°18′N, 11°54′Ö</span>
           </div>
           <div style="margin-top:1.25rem;">
-            <strong style="font-size:0.88rem; color:var(--navy); display:block; margin-bottom:0.5rem;">Väderprognos närmsta dygnet</strong>
+            <strong style="font-size:0.88rem; color:var(--navy); display:block; margin-bottom:0.5rem;">Väderprognos närmsta dygnet från YR</strong>
             <div style="border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);">
               <iframe src="https://www.yr.no/en/content/1-2899857/card.html?mode=light"
                       style="width:100%; height:300px; border:none; display:block;"
@@ -180,6 +180,7 @@
                       loading="lazy"
                       scrolling="no"></iframe>
             </div>
+            <strong style="font-size:0.88rem; color:var(--navy); display:block; margin-top:0.75rem;">Väderobservationer från <a href="https://www.smhi.se/vader/observationer/observationer/station/71190/lufttemperatur" target="_blank" rel="noopener" style="color:var(--ocean); font-weight:700;">SMHIs väderstation på Nidingen</a></strong>
           </div>
         </div>
       </div>

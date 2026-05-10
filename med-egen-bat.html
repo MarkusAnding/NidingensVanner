@@ -16,7 +16,7 @@
     <div class="header-inner">
       <a href="index.html" class="logo">
         <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
-        <span class="logo-name">Föreningen Nidingens Vänner</span>
+        <div class="logo-name"><span class="logo-name-top">Föreningen</span><span class="logo-name-bot">Nidingens Vänner</span></div>
       </a>
       <button class="nav-toggle" aria-label="Öppna meny"
               onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
@@ -74,25 +74,46 @@
     </div>
   </div>
 
-  <!-- ===== KOORDINATER & LÄGE ===== -->
+  <!-- ===== NAVIGATION & SJÖKORT ===== -->
   <section class="section">
     <div class="container">
-      <div class="grid-2">
+      <div class="grid-2" style="align-items:start;">
         <div>
           <span class="eyebrow">Navigation</span>
-          <h2>Hitta till Nidingen</h2>
+          <h2>Navigation till Nidingen</h2>
           <p>
-            Nidingen ligger i Kungsbacka skärgård utanför den halländska kusten, ca 8 sjömil
-            sydväst om Göteborg. Ön omges av grunda farvatten och farliga rev – använd alltid
-            aktuellt sjökort och navigera med omsorg.
+            Insegling till Nidingens största brygga i Kausahamnen kan göras från väst.
+            Det finns även möjlighet att ligga på Kolbryggan i syd eller på svaj i syd.
+            Nedan ses grundprincip för navigation in i Kausahamnen samt ett modifierat
+            båtsportkort och ett uppdaterat äldre bra sjökort. Medlemmar använder
+            dessa beskrivningar som stöd vid färd till Nidingen.
           </p>
           <p>
-            Utgångspunkten för de flesta besökare är <strong>Gottskär</strong>, som ligger
-            ca 4 sjömil öster om Nidingen. Från Gottskär är resan ca 45–60 minuter med
-            motorbåt beroende på hastighet och väder.
+            Nidingens Vänner tackar <strong>Stefan Pettersson</strong> för uppdatering och design av de äldre sjökorten.
+            Stefan kör på turlista till Nidingen för er som vill ta det alternativet.
+          </p>
+          <p>
+            <strong>Använd alltid aktuellt sjökort för området kring Nidingen. Farvattnen runt ön är grunda och kräver noggrann navigering.</strong>
           </p>
 
-          <div style="background:var(--sand); border-radius:var(--radius-lg); padding:1.5rem 2rem; margin-top:1.75rem;">
+          <h3 style="font-size:1rem; color:var(--navy); margin-top:1.75rem; margin-bottom:0.5rem;">Båtsportkort från 2024</h3>
+          <p style="margin-bottom:0.75rem;">Modifierat med två tillagda stenar norr om den tänkta inseglingslinjen.</p>
+          <ul style="list-style:none; padding:0; margin:0 0 1.75rem; display:flex; flex-direction:column; gap:0.5rem;">
+            <li style="display:flex; gap:0.75rem; align-items:baseline;">
+              <span style="background:var(--ocean); color:#fff; font-weight:700; font-size:0.78rem; padding:0.15rem 0.5rem; border-radius:4px; flex-shrink:0;">1</span>
+              <span>Pinnen ("Jeppestenen")</span>
+            </li>
+            <li style="display:flex; gap:0.75rem; align-items:baseline;">
+              <span style="background:var(--ocean); color:#fff; font-weight:700; font-size:0.78rem; padding:0.15rem 0.5rem; border-radius:4px; flex-shrink:0;">2</span>
+              <span>Bryggan i Kausahamnen</span>
+            </li>
+            <li style="display:flex; gap:0.75rem; align-items:baseline;">
+              <span style="background:var(--ocean); color:#fff; font-weight:700; font-size:0.78rem; padding:0.15rem 0.5rem; border-radius:4px; flex-shrink:0;">3</span>
+              <span>Svajplats</span>
+            </li>
+          </ul>
+
+          <div style="background:var(--sand); border-radius:var(--radius-lg); padding:1.5rem 2rem;">
             <h3 style="margin-top:0; font-size:1rem; color:var(--navy);">Koordinater – Nidingen</h3>
             <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:0.75rem;">
               <div>
@@ -105,8 +126,8 @@
               </div>
             </div>
             <div style="display:flex; gap:0.75rem; margin-top:1.25rem; flex-wrap:wrap;">
-              <a href="https://www.eniro.se/kartor?c=57.298501,11.900597&z=14&l=nautical" target="_blank" rel="noopener" class="btn btn-outline-navy" style="font-size:0.82rem; padding:0.5rem 1rem;">
-                Eniro sjökort ↗
+              <a href="https://www.skippo.se/plan?linkType=geoPlace&lat=57.3027&lng=11.90063&title=Nidingen" target="_blank" rel="noopener" class="btn btn-outline-navy" style="font-size:0.82rem; padding:0.5rem 1rem;">
+                Skippos sjökort ↗
               </a>
               <a href="https://maps.google.com/?q=57.3025086,11.9007754" target="_blank" rel="noopener" class="btn btn-outline-navy" style="font-size:0.82rem; padding:0.5rem 1rem;">
                 Google Maps ↗
@@ -115,19 +136,22 @@
           </div>
         </div>
 
-        <img src="Bilder/insegling.jpg" alt="Insegling till Nidingen" data-lightbox style="width:100%; height:400px; object-fit:contain; background:var(--navy); border-radius:var(--radius-lg); cursor:zoom-in;">
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <img src="Bilder/flygfoto.png" alt="Flygfoto över Nidingen med inseglingsled" data-lightbox style="width:100%; object-fit:contain; background:var(--navy); border-radius:var(--radius-lg); cursor:zoom-in;">
+          <img src="Bilder/sjökort.png" alt="Båtsportkort över Nidingen 2024" data-lightbox style="width:100%; object-fit:contain; background:#eaf3fb; border-radius:var(--radius-lg); cursor:zoom-in;">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== BILDGALLERI ===== -->
-  <section class="section section--sand">
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Bilder</span>
         <h2>Resan ut till ön</h2>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem;">
+      <div class="grid-3">
         <img src="Bilder/markus i fören.jfif" alt="I fören på väg mot Nidingen" data-lightbox style="width:100%; height:260px; object-fit:cover; border-radius:var(--radius-lg); cursor:zoom-in;">
         <img src="Bilder/gammal karta_1.jpg" alt="Historisk sjökarta över Nidingen" data-lightbox style="width:100%; height:260px; object-fit:cover; border-radius:var(--radius-lg); cursor:zoom-in;">
         <img src="Bilder/gammal karta_2.jpg" alt="Historisk sjökarta" data-lightbox style="width:100%; height:260px; object-fit:cover; border-radius:var(--radius-lg); cursor:zoom-in;">
@@ -135,66 +159,6 @@
     </div>
   </section>
 
-  <!-- ===== ANKRING & HAMN ===== -->
-  <section class="section section--sand">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Ankring</span>
-        <h2>Ankring och förtöjning</h2>
-        <p>Nidingen saknar gästhamn. Ankring sker i öppet vatten – kontrollera djup och väderlek noga.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="card-body">
-            <span class="card-tag">Väst</span>
-            <h3>Västsidan</h3>
-            <p>Skyddad ankring på västsidan i lämpliga vindförhållanden. Grunda partier kräver aktsamhet – kontrollera aktuellt sjökort.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-tag">Öst</span>
-            <h3>Östsidan</h3>
-            <p>Viss skydd vid ostliga vindar. Botten varierar – ta lod och ankra med säker marginal till grunden runt ön.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-tag">Viktig info</span>
-            <h3>Ingen gästhamn</h3>
-            <p>Det finns ingen gästhamn eller brygga för besökare. Kom förberedd med ankare och dingy för att ta dig i land.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PRAKTISKT ===== -->
-  <section class="section">
-    <div class="container" style="max-width:800px; margin:0 auto;">
-      <span class="eyebrow">Att tänka på</span>
-      <h2>Praktiska tips</h2>
-
-      <div class="grid-2" style="margin-top:2rem; gap:1.5rem;">
-        <div class="fact-box">
-          <h4>🗺️ Sjökort</h4>
-          <p style="font-size:0.9rem; margin-bottom:0;">Använd alltid aktuellt sjökort för området kring Nidingen. Farvattnen runt ön är grunda och kräver noggrann navigering.</p>
-        </div>
-        <div class="fact-box">
-          <h4>🌬️ Väder</h4>
-          <p style="font-size:0.9rem; margin-bottom:0;">Kolla SMHI:s väderprognos och vindvarningar innan avfärd. Nidingen har ett utsatt läge – väder kan snabbt förändras.</p>
-        </div>
-        <div class="fact-box">
-          <h4>🐦 Fridlysning</h4>
-          <p style="font-size:0.9rem; margin-bottom:0;">Ön är fridlyst 1 april–15 juli för att skydda häckande fåglar. Landstigning är då inte tillåten.</p>
-        </div>
-        <div class="fact-box">
-          <h4>📞 Kontakt</h4>
-          <p style="font-size:0.9rem; margin-bottom:0;">Kontakta Johan Elvborn på <a href="tel:0707998519">0707-99 85 19</a> eller <a href="https://www.dest-gottskar-nidingen.se/" target="_blank" rel="noopener">Destination Gottskär-Nidingen</a> för lokala råd.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== CTA ===== -->
   <section class="section section--dark">

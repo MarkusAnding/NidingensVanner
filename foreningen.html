@@ -16,7 +16,7 @@
     <div class="header-inner">
       <a href="index.html" class="logo">
         <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
-        <span class="logo-name">Föreningen Nidingens Vänner</span>
+        <div class="logo-name"><span class="logo-name-top">Föreningen</span><span class="logo-name-bot">Nidingens Vänner</span></div>
       </a>
       <button class="nav-toggle" aria-label="Öppna meny"
               onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
@@ -378,7 +378,7 @@
         <div>
           <h3 style="margin-bottom:1.5rem;">Skicka ett meddelande</h3>
           <form>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="form-grid-2">
               <div class="form-group">
                 <label for="fname">Förnamn</label>
                 <input type="text" id="fname" placeholder="Anna" required>
