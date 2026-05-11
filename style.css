@@ -889,9 +889,9 @@ p:last-child { margin-bottom: 0; }
   gap: 1rem;
 }
 .footer-logo-img {
-  height: 42px;
+  height: 100px;
   width: auto;
-  max-width: 200px;
+  max-width: 360px;
   display: block;
   opacity: 0.90;
 }

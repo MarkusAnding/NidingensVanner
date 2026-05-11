@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tretåig mås – Fauna – Nidingens Vänner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-body::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    @media (max-width: 600px) {
+      .article-body img[style*="float"] {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 1.5rem 0 !important;
+      }
+    }
+    .article-body p {
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 1.5rem;
+      background: var(--sand);
+      border-radius: var(--radius);
+      margin-bottom: 2.5rem;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+    }
+    .article-meta strong { color: var(--navy); }
+    .article-source {
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Nidingens Vänner Logo.png" alt="Nidingens Vänner" class="logo-img">
+        <div class="logo-name"><span class="logo-name-top">Föreningen</span><span class="logo-name-bot">Nidingens Vänner</span></div>
+      </a>
+      <button class="nav-toggle" aria-label="Öppna meny"
+              onclick="this.closest('.header').querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" role="navigation">
+        <a href="index.html">Start</a>
+        <div class="nav-dropdown">
+          <a href="om-nidingen.html" class="nav-dropdown-trigger active">Om Nidingen <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="om-nidingen.html">Översikt</a>
+            <a href="fyrverksamhet.html">Fyrverksamhet</a>
+            <a href="fauna.html" style="font-weight:600; color:var(--navy) !important;">Fauna</a>
+            <a href="antikvariska.html">Antikvariska dokument</a>
+            <a href="litteratur.html">Litteratur</a>
+            <a href="er-ol.html">European Route of Lighthouses</a>
+            <a href="byggnader.html">Historiska byggnader</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="besoka.html" class="nav-dropdown-trigger">Besöka <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown-menu">
+            <a href="besoka.html">Planera ditt besök</a>
+            <a href="med-eigen-bat.html">Med egen båt</a>
+            <a href="bo-pa-nidingen.html">Bo på Nidingen</a>
+          </div>
+        </div>
+        <a href="foreningen.html">Föreningen</a>
+        <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="nav-cta nav-cta--fb" aria-label="Följ oss på Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="foreningen.html#bli-medlem" class="nav-cta">Bli Medlem</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brödsmulor -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Start</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="om-nidingen.html">Om Nidingen</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="fauna.html">Fauna</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Tretåig mås</span>
+    </div>
+  </nav>
+
+  <!-- ===== SIDHERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Tretåig mås</h1>
+      <p><em>Rissa tridactyla</em> – för första gången påvisad häckande i Sverige</p>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== ARTIKEL ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <div class="article-meta">
+          <div><strong>Författare</strong><br>Sven Mathiasson</div>
+          <div><strong>Fyndår</strong><br>1967</div>
+          <div><strong>Plats</strong><br>Nidingen, Nordhalland</div>
+          <div><strong>Källa</strong><br>Göteborgs Naturhistoriska Museum</div>
+        </div>
+
+        <img src="Bilder/sven1.jpg" alt="Tretåig mås (Rissa tridactyla) på Nidingen" data-lightbox
+             style="float:left; width:42%; max-width:360px; object-fit:contain; object-position:center; background:var(--sand); border-radius:var(--radius-lg); margin:0 2rem 1.5rem 0; cursor:zoom-in;">
+
+        <p>
+          Den 13 augusti 1967 erhöll Naturhistoriska museet i Göteborg en telefonförfrågan
+          angående en säregen mås. Den hade uppmärksammats på den lilla ön Nidingen utanför
+          Onsalalandet i Nordhalland, och enligt uppgiftslämnaren uppehöll den sig trots den
+          sena tidpunkten invid bo med unge. Beskrivningen av ungen stämde med tretåig mås,
+          varför undertecknad påföljande dag efter kontakt med fyrmästare V. SJÖSTEDT på
+          Nidingens fyrplats beslöt att söka kontrollera arttillhörigheten på ort och ställe.
+          Genom fyrfolkets välvilliga bistånd kunde jag också i vackert väder, men i frisk vind
+          ta mig ut till ön.
+        </p>
+
+        <h3>Ön Nidingen</h3>
+        <p>
+          Ön Nidingen ligger 7 km från de sydligaste uddarna på Onsalalandet och 5 km från den
+          däremellan liggande större Malön. Ön betecknas ofta såsom skär och dess storlek är ej
+          heller betydande, maximala längden är ungefär 1000 m och största bredden 3–400 m. Ön
+          är låglänt, den uppbygges främst av smärre och större stenblock, svallgrus och sand
+          samt klappersten. Vegetationen består av den för det yttre havsbandets västkustöar
+          normala. Träd och buskage saknas. Den mest storvuxna vegetationen utgöres av strandråg
+          (<em>Elymus arenarius</em>) samt kraftiga bestånd av strandkål (<em>Crambe maritima</em>),
+          samt strandaster (<em>Aster tripolium</em>) och marviol (<em>Cakile maritima</em>).
+          Mycket vanliga är skörbjuggsört (<em>Cochlearia officinalis</em>), gul fetknopp
+          (<em>Sedum acre</em>), gåsört (<em>Potentilla anserina</em>), mandelblomma
+          (<em>Saxifraga granulata</em>) samt gulkämpar (<em>Plantago maritima</em>). På de mera
+          höglänta ängarna växer allehanda gräs och trift (<em>Armeria maritima</em>). En allmän
+          beskrivning över ön har gjorts i bokform (CARLSSON 1946).
+        </p>
+        <p>
+          På ön har Sjöfartsverket anläggningar i form av fyrar och personalbostäder åt fyrfolket.
+          Två mäktiga fyrtorn av äldre datum reser sig likt mäktiga fågelbergsklippor. De senare
+          erbjuder också den enda, men långsökta likheten med ett atlantiskt fågelberg.
+        </p>
+
+        <h3>Boplatsen</h3>
+        <p>
+          Detta till trots kunde snart efter ankomsten till ön konstateras att måsen med unge
+          verkligen var en tretåig mås. Boplatsen utgjordes av ett sjömärke, vars cementsockel
+          gjutits på ett större stenblock. På en avsats vid basen av sockeln låg boet. Det mätte
+          ca 10 × 30 × 45 cm. Det var byggt av gamla strån från strandråg, blåstång och ålgräs.
+          Dessutom var dess inre »murat» på för arten typiskt sätt. Läget vätte mot SSE. Vid den
+          kvadratiska sockelns mot öster vättande sida låg ytterligare ett bo, ungefär hälften
+          så stort som det bebodda.
+        </p>
+        <p>
+          Då jag nalkades boet låg ungen i detsamma och föräldrafågeln (endast en syntes under
+          hela vistelsen på ön, mellan kl. 14.00 och 16.30) satt på sjömärkets topp. När jag
+          ytterligare närmade mig boet lyfte den gamla fågeln, kretsade några varv över mitt
+          huvud, skriade på artens kacklande maner, men fällde nästan omedelbart på bokanten
+          invid ungen. Föräldrafågelns närhet utlöste tiggningsrörelser hos ungfågeln, men
+          någon matning skedde ej.
+        </p>
+        <p>
+          Fåglarna lät mig nalkas intill ett avstånd av 4–5 meter. Den gamla fågeln visade vid
+          några tillfällen tecken till oro, men förhöll sig eljest lugn. Under normala betingelser
+          saknar den tretåiga måsen genom sitt skyddande boplatsläge (branta klippstup) i stor
+          utsträckning fiender av det slag som markhäckande måsar utsättes för. Man anser att
+          de gamla fåglarnas oräddhet vid boet, de få aggressiva attackerna, liksom ungarnas
+          avsaknad av skyddsteckning och tryckande beteenden samt vitkalkningen av boplatsen
+          genom exkrementer vara tecken på boplatsmiljöns säkerhet, vilken sålunda minskat
+          behovet av skyddsbeteenden.
+        </p>
+
+        <h3>Ringmärkningen</h3>
+        <p>
+          Ganska snart lade jag märke till att den gamla fågeln var ringmärkt. Med kikarens
+          hjälp lyckades jag läsa texten: <em>Museum…enhagen</em> samt siffrorna 56. Trots att
+          den gamla fågeln ibland förflyttade sig syntes det omöjligt att uppsnappa flera
+          siffror. Men ungen kom till hjälp. Den hade vid några tillfällen riktat näbben under
+          tiggrörelser mot föräldrarnas näbb, nu började den plocka på ringen och efter en
+          stund vred sig denna såpass att jag kunde uppfånga siffrorna 1056. Ytterligare två
+          siffror borde finnas, men de fyra uppsnappade utgjorde slutsiffrorna. Att det rörde
+          sig om Zool. Museum, Copenhagen, stod klart och senare besked därifrån visar att den
+          gamla fågelns fullständiga ringnummer bör ha varit 501056. I så fall märktes den som
+          bounge på Nordre Renner i Kattegatt den 25 juni 1963.
+        </p>
+
+        <img src="Bilder/sven2.jpg" alt="Boet på sjömärkets betongbas, Nidingen 1967" data-lightbox
+             style="width:100%; max-height:380px; object-fit:cover; border-radius:var(--radius-lg); margin:2rem 0; cursor:zoom-in;">
+
+        <h3>Häckningsförloppet</h3>
+        <p>
+          Under ringavläsningen hade jag tydligen blivit alltför närgången och både den gamla
+          och unga fågeln lämnade boet. Ungen flög mycket bra, men dock något tvekande och i
+          cirklar. Både den och föräldrafågeln slog till på en stor sten vid stranden. Gamla
+          bobalar och fyrfolkets uppgifter antydde att marken kring sjömärket och den tretåiga
+          måsens boplats under sommaren hyst häckande gråtrutar (<em>Larus argentatus</em>),
+          fiskmåsar (<em>Larus canus</em>) samt en skrattmåskoloni (<em>Larus ridibundus</em>).
+          Fyrmästaren kunde också omtala att ungen redan tidigare på morgonen den 14 augusti,
+          utan att ha blivit störd, gjort en mindre flygtur. Från kaffebordet i
+          fyrmästarbostaden kunde jag snart konstatera båda fåglarnas återkomst till bobalen,
+          där ungen därefter kvarstannade. På min anmodan höll man under efterföljande dagar
+          uppsikt över måsarna. De fanns kvar till den 17 augusti, men från och med efterföljande
+          dag var de försvunna.
+        </p>
+        <p>
+          De sålunda insamlade uppgifterna lämnar följande besked om häckningsförloppet.
+          Den kvarvarande föräldrafågeln hade en ålder av fyra år. Den tretåiga måsen skrider
+          normalt till häckning först vid tre–fyra års ålder (COULSON &amp; WHITE 1958 a o. b.).
+          Inga iakttagelser finns som tyder på måsarnas närvaro år 1966. Ej heller finns några
+          iakttagelser kring deras ankomst till boplatsen år 1967. Eftersom den tretåiga måsen
+          ruvar 27–28 dygn och ungarna blir flygga vid 4–5 veckors ålder kan man dock med
+          ledning därav och den här aktuella ungens flygturer den 14 augusti nedräkna
+          äggläggningen till den 21 juni plus minus en vecka. Tidpunkten är sen. I de danska
+          Kattegatts­kolonierna lägges äggen normalt redan i början av maj och kläckningen är
+          i full gång i början av juni. Den sena tidpunkten kan måhända förklaras med
+          föräldrafågelns ålder (förstagångshäckarna anländer senare till häckplatserna), men
+          det kan också röra sig om en omlagd kull.
+        </p>
+
+        <h3>Utbredning och expansion</h3>
+        <p>
+          Den tretåiga måsen är ett arktiskt faunaelement med en visserligen luckförsedd, men
+          dock circumpolär holarktisk förekomst. Den förekommer sålunda på flera håll längs
+          Nordatlantens kuster. I de västra delarna sträcker sig utbredningen söderut till
+          St. Lawrence-bukten, i de östra till Englands kuster och Bretagnes västra uddar.
+          På den engelska nordsjökusten är den sparsammare än på atlantkusterna och den från
+          Ishavet obrutna förekomsten längs norska kusten upphör vid Kjör, intill Rott
+          (HAFTORN 1966).
+        </p>
+        <p>
+          Arten är sålunda ytterst ovanlig som häckfågel inom de östra delarna av
+          nordsjöområdet och Kattegatt, och förekomsten där är av ungt datum. Den norska
+          förekomsten söder om de gamla tillhållen på Runde utanför Ålesund, där fågeln
+          fanns redan i mitten av 1800-talet, har tillkommit efter 1949. Helgolandskolonin
+          tillkom år 1938. De danska kolonierna i Kattegatt har tillkommit efter 1940-talet.
+        </p>
+        <p>
+          Jämsides med spridningen i det geografiska rummet har en numerärtillväxt skett på
+          de nyetablerade häckplatserna. Den under lång tid sydligaste norska kolonin, på
+          Runde, tillkom uppenbarligen omkring år 1844; år 1926 beräknades beståndet till
+          100 000 par och 1956 till inemot 200 000 par. Helgolandskolonin omfattade 3 par
+          år 1938, ungefär 200 par 1963.
+        </p>
+        <p>
+          År 1941 påträffades den första kolonin i Kattegattsområdet – 11 par på Tyvholm
+          vid Hirsholmene. År 1946 räknade den 124 par, år 1962 fanns 234 par på Tyvholm,
+          Kovholm och Graesholm. I mitten av 1950-talet började arten ytterligare sprida sig:
+          år 1955 kom den till Nordre Rønner, från de första tre paren ökade beståndet till
+          drygt 50 par år 1963.
+        </p>
+        <p>
+          Att denna framträdande expansionskraft också skulle kunna resultera i bosättning i
+          vårt land hade länge stått klart, likaså att den första framstöten, såsom nu belagts
+          genom ringmärkningen, vore att vänta via en av de redan etablerade
+          Kattegattskolonierna. Ön Nidingen har ju därvid intagit en lämplig position –
+          att bosättningen nu också skedde där var därför ej förvånande.
+        </p>
+
+        <h3>Historiska svenska uppgifter</h3>
+        <p>
+          Den tretåiga måsen har redan tidigare uppgivits häcka vid Västkusten, men riktigheten
+          därav har ifrågasatts. Det gäller en uppgift i en beskrivning över ön Tjörns djurvärld
+          (EKSTRÖM 1850) vari det säges om tretåig mås: »Ehuru denna Måse vanligen endast träffas
+          här under senhösten och vintern, blev likväl en skjuten vid boet d. 12 juli; således
+          häckar han ock någon gång i Tjörns skärgård». 1800-talets fågelfaunor (NILSSON 1835,
+          1858, MALM 1877, SUNDEVALL 1885) framhåller samtliga att uppträdandet i Sverige
+          främst är knutet till västkusten och till vintermånaderna (oktober–mars). Att den ej
+          visade sig under sommaren påpekas av samtliga författare. Under vintern kunde den dock
+          uppenbarligen tidvis uppträda i större antal, såsom fallet var 1848–49.
+        </p>
+
+        <h3>Nutida förekomst längs Västkusten</h3>
+        <p>
+          Dylika massuppträdanden synes i våra dagar vara normala under hösten längs västkusten,
+          och synes regelbundet uppstå i samband med starka, västliga stormar. I slutet av
+          oktober 1965 noterades sålunda 1 223 exemplar (29.10) och 834 exemplar (31.10) på
+          sydsträck vid Hönö i Göteborgs norra skärgård (UNGER 1967). Numera ses den tretåiga
+          måsen också regelbundet vid Västkusten under sommarhalvåret om än endast i enstaka
+          exemplar eller smärre antal.
+        </p>
+        <p>
+          Vintertidens tretåiga måsar har dock helt säkert delvis annat ursprung. Återfynden
+          av ringmärkta danska och norska tretåiga måsar visar att årets ungfåglar sprider sig
+          över stora delar av Nordatlanten – fynd föreligger från såväl de västra som östra
+          delarna därav. Från vinterhalvåret finns dessutom från både danska, svenska och norska
+          vatten fynd av nordryska tretåiga måsar.
+        </p>
+
+        <div class="article-source">
+          Av Sven Mathiasson, Naturhistoriska museet i Göteborg, 1967.
+          Ursprungligen publicerad på <a href="https://www.nidingensvanner.se/fauna.html" target="_blank" rel="noopener">nidingensvanner.se</a>.
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="fauna.html" class="btn btn-outline-navy">← Tillbaka till Fauna</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Stäng">&times;</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+  </div>
+  <script>
+    function openLightbox(src, alt) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt || '';
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    document.querySelectorAll('img[data-lightbox]').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+  </script>
+
+  <!-- ===== SIDFOT ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="Nidingens Vänner Logo white.png" alt="Nidingens Vänner" class="footer-logo-img">
+          </a>
+          <p>Föreningen arbetar för att bevara dubbelfyrarna och omkringliggande byggnader på Nidingen enligt antikvarisk standard.</p>
+          <a href="mailto:info@nidingensvanner.se" style="color:var(--gold); font-size:0.85rem;">info@nidingensvanner.se</a>
+          <a href="https://www.facebook.com/NidingensVanner" target="_blank" rel="noopener" class="fb-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Följ oss på Facebook
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Om Nidingen</h4>
+          <ul>
+            <li><a href="om-nidingen.html">Översikt</a></li>
+            <li><a href="fyrverksamhet.html">Fyrverksamhet</a></li>
+            <li><a href="fauna.html">Fauna</a></li>
+            <li><a href="antikvariska.html">Antikvariska dokument</a></li>
+            <li><a href="litteratur.html">Litteratur</a></li>
+            <li><a href="er-ol.html">European Route of Lighthouses</a></li>
+            <li><a href="byggnader.html">Historiska byggnader</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Besök</h4>
+          <ul>
+            <li><a href="besoka.html">Planera besök</a></li>
+            <li><a href="med-eigen-bat.html">Med egen båt</a></li>
+            <li><a href="bo-pa-nidingen.html">Bo på Nidingen</a></li>
+            <li><a href="besoka.html#praktiskt">Praktisk info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Föreningen</h4>
+          <ul>
+            <li><a href="foreningen.html">Om oss</a></li>
+            <li><a href="foreningen.html#bli-medlem">Bli Medlem</a></li>
+            <li><a href="foreningen.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Nidingens Vänner. Alla rättigheter förbehålls.</span>
+        <span>Kungsbacka skärgård, Halland, Sverige</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
